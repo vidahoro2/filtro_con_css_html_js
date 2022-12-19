@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+    
+<section class="filter-container">
+    <section class="cat-container">
+    <select  name="categorias" class="cat cat1">
+    <option  value="" disabled selected>Categoría</option>
+      <option value="edificios">Edificios</option>
+      <option value="hospitales">Hospitales</option>
+      <option value="estadios">Estadios</option>
+    </select>
+    <select name="uso" class="cat cat2">
+    <option value="" disabled selected>Uso</option>
+      <option value="edificios">Edificios</option>
+      <option value="hospitales">Hospitales</option>
+      <option value="estadios">Estadios</option>
+    </select>
+    <select name="ubicacion" class="cat cat3">
+    <option value="" disabled selected>Ubicación</option>
+      <option value="edificios">España</option>
+      <option value="hospitales">Colombia</option>
+      <option value="estadios">Ecuador</option>
+    </select>
+       </section>
+    <section class="range-cat">
+    <div class="select-range">
+    <label for="myRange">Tamaño</label>
+       <input type="range" id="myRange1" name="myRange1" min="1" max="10" value="2" />
+     </div>
+    
+    <div class="select-range">
+    <label for="myRange">Año</label>
+       <input type="range" id="myRange2" name="myRange2" min="1990" max="2019" value="1990"/>
+    </div>
+       
+    </section>
+    </section>
+    <section class="projects-container">
+            <div class="project project1" onclick="location.href='https://bis.brandsholdingcompany.com/lycee-francais/'" data-category="edificios">
+                <img class="image-project" src="https://bis.brandsholdingcompany.com/wp-content/uploads/2022/12/SG1771_0319-2-scaled.jpg" alt="Lyvée Francais">
+                <div class="text-project-container">
+                    <h3>Lycée Français</h3>
+                    <p>La escuela infantil del Liceo Francés de Barcelona se sitúa en la calle Munner</p>
+    
+                </div>
+            </div>
+            <div class="project project2" onclick="location.href='https://bis.brandsholdingcompany.com/nueva-clinica-girona/'" data-category="hospitales">
+                <img class="image-project" src="https://bis.brandsholdingcompany.com/wp-content/uploads/2022/12/ALÇAT-def-scaled.jpg" alt="Nueva Clínica Girona">
+                <div class="text-project-container">
+                    <h3>Nueva Clínica Girona</h3>
+                    <p>La Nueva Clínica Girona tiene forma rectangular y se divide en dos bloques extremos (A y C) y un bloque central (B).</p>
+    
+                </div>
+            </div>
+            <div class="project project3" onclick="location.href='https://bis.brandsholdingcompany.com/passeig-de-la-vall-dhebron/'" data-category="estadios">
+                <img class="image-project" src="https://bis.brandsholdingcompany.com/wp-content/uploads/2022/10/PICT2663.jpg" alt="Passeig de la Vall d’Hebron">
+                <div class="text-project-container">
+                    <h3>Passeig de la Vall d’Hebron</h3>
+                    <p>El proyecto realizado consistía en la creación de una unidad para pacientes hospitalizados por quemaduras. </p>
+    
+                </div>
+            </div>
+            <div class=" project4 big-project" onclick="location.href='https://bis.brandsholdingcompany.com/generalitat-barcelona/'" data-category="estadios">
+                <img class="image-big-project" src="https://bis.brandsholdingcompany.com/wp-content/uploads/2022/12/Perspectiva-05-scaled.jpg" alt=" Generalitat Barcelona">
+                <div class="text-project-container">
+                    <h3>Oficinas Campus Administrativo de la Generalitat Barcelona</h3>
+                    <p>Proyecto de obra nueva situado en la Zona Franca de Barcelona destinado a oficinas que consta de una planta sótano, un semisótano y 6 plantas sobre rasante y dividido en tres grandes zonas: Torre A, B y zona Central.</p>
+    
+                </div>
+            </div>
+    
+            <div class="project project1" data-category="estadios">
+                <img class="image-project" src="https://bis.brandsholdingcompany.com/wp-content/uploads/2022/12/SG1771_0319-2-scaled.jpg" alt="Lyvée Francais">
+                <div class="text-project-container">
+                    <h3>Lycée Francés</h3>
+                    <p>La escuela infantil del Liceo Francés de Barcelona se sitúa en la calle Munner</p>
+    
+                </div>
+            </div>
+            <div class="project project2" data-category="estadios">
+                <img class="image-project" src="https://bis.brandsholdingcompany.com/wp-content/uploads/2022/12/SG1771_0319-2-scaled.jpg" alt="Lyvée Francais">
+                <div class="text-project-container">
+                    <h3>Lycée Francés</h3>
+                    <p>La escuela infantil del Liceo Francés de Barcelona se sitúa en la calle Munner</p>
+    
+                </div>
+            </div>
+            <div class="project project3" data-category="estadios">
+                <img class="image-project" src="https://bis.brandsholdingcompany.com/wp-content/uploads/2022/12/SG1771_0319-2-scaled.jpg" alt="Lyvée Francais">
+                <div class="text-project-container">
+                    <h3>Lycée Francés</h3>
+                    <p>La escuela infantil del Liceo Francés de Barcelona se sitúa en la calle Munner</p>
+    
+                </div>
+            </div>
+            <div class="project4 big-project" data-category="estadios">
+                <img class="image-big-project" src="https://bis.brandsholdingcompany.com/wp-content/uploads/2022/12/SG1771_0319-2-scaled.jpg" alt="Lyvée Francais">
+                <div class="text-project-container">
+                    <h3>Lycée Francés</h3>
+                    <p>La escuela infantil del Liceo Francés de Barcelona se sitúa en la calle Munner</p>
+    
+                </div>
+            </div>
+        </section>
+    
+    
+    
+    
+    
+</body>
+</html>
+
+
+    
