@@ -1,7 +1,9 @@
 const categorias = ['estructuras','instalaciones','sostenibilidad'];
 const usos = ['parquing','centroatencionprimaria','civil','comercial','cultural','docente','deportivo','hospitalario','hotelero','industrial','oficinas','recintofiral','residencial','servicios','sociosanitario'];
+const ubicaciones =['españa','andorra','ecuador','marruecos','tunez']
 const select = document.querySelector('select');
 const select2 = document.querySelector('.selectuso');
+const select3 = document.querySelector('.selectPlace');
 let style = document.createElement('style');
 
 const categoria = select.addEventListener('change',()=>{
@@ -105,4 +107,34 @@ const uso =select2.addEventListener('change',()=>{
 
     }
 
-})
+});
+
+
+
+const ubicacion = select3.addEventListener('change',()=>{
+
+    if (select3.value == ubicaciones[0]){
+        style.innerHTML = '[ubicacion="andorra"],[ubicacion="ecuador"],[ubicacion="marruecos"],[ubicacion="tunez"]{display:none;}'
+        document.head.appendChild(style);
+    }
+    if (select3.value == ubicaciones[1]){
+        style.innerHTML = '[ubicacion="españa"],[ubicacion="ecuador"],[ubicacion="marruecos"],[ubicacion="tunez"]{display:none;}'
+        document.head.appendChild(style);
+    }
+    if (select3.value == ubicaciones[2]){
+        style.innerHTML = '[ubicacion="españa"],[ubicacion="andorra"],[ubicacion="marruecos"],[ubicacion="tunez"]{display:none;}'
+        document.head.appendChild(style);
+    }
+    if (select3.value == ubicaciones[3]){
+        style.innerHTML = '[ubicacion="españa"],[ubicacion="andorra"],[ubicacion="ecuador"],[ubicacion="tunez"]{display:none;}'
+        document.head.appendChild(style);
+    }
+    if (select3.value == ubicaciones[3]){
+        style.innerHTML = '[ubicacion="españa"],[ubicacion="andorra"],[ubicacion="ecuador"],[ubicacion="marruecos"]{display:none;}'
+        document.head.appendChild(style);
+    }
+
+
+    
+
+});
