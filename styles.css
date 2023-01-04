@@ -100,30 +100,35 @@
     }
     
     
-    
+    .project12{
+        margin-bottom: 8rem; 
+    }
     
     [value="edificios"]:change ~ .projects-container .project:not([data-category~="edificios"]){
         display:none;
     }
     
     @media only screen and (max-width: 425px)  {
-    .rowdown {
-    display:none;
-    }
-    
-    .project{
-        width: 22rem;
-    
-    }
-    .text-project-container{
-         text-align: justify;
-    }
-    .big-project{
-         margin-top:2rem;
-         margin-bottom: -23rem !important;
-    }
-    
-    }
+        .rowdown {
+        display:none;
+        }
+        
+        .project{
+            width: 22rem;
+        
+        }
+        .text-project-container{
+             text-align: justify;
+        }
+        .big-project{
+             margin-top:2rem;
+             margin-bottom: -23rem !important;
+        }
+        .project5, .project6, .project7, .project9, .project10{
+            margin-top: 3rem;
+      }
+        
+        }
     @media only screen and (max-width: 768px)  {
     .big-project{
          margin-top:4rem;

@@ -10,120 +10,187 @@
 </head>
 <body>
     
-<section class="filter-container">
-    <section class="cat-container">
-    <select  name="categorias" class="cat cat1">
-    <option  value="" disabled selected>Categoría</option>
-      <option class="op" value="estructuras">Estructuras</option>
-      <option class="op" value="instalaciones">Instalaciones</option>
-      <option class="op" value="sostenibilidad">Sostenibilidad</option>
-    </select>
-    <select name="uso" class="cat cat2">
-    <option value="" disabled selected>Uso</option>
-      <option value="parquing">Parquing</option>
-      <option value="centroatencionprimaria">Centro Atención Primária</option>
-      <option value="civil">Civil</option>
-      <option value="comercial">Comercial</option>
-      <option value="cultural">Cultural</option>
-      <option value="docente">Docente</option>
-      <option value="deportivo">Deportivo</option>
-      <option value="hospitalario">Hospitalario</option>
-      <option value="hotelero">Hotelero</option>
-      <option value="industrial">Industrial</option>
-      <option value="oficinas">Oficinas</option>
-      <option value="recintofiral">Recinto Firal</option>
-      <option value="residencial">Residencial</option>
-      <option value="servicios">Servicios</option>
-      <option value="sociosanitario">Sociosanitario</option>
-
-    </select>
-    <select name="ubicacion" class="cat cat3">
-    <option value="" disabled selected>Ubicación</option>
-      <option value="edificios">España</option>
-      <option value="hospitales">Colombia</option>
-      <option value="estadios">Ecuador</option>
-    </select>
-       </section>
-    <section class="range-cat">
-    <div class="select-range">
-    <label for="myRange">Tamaño</label>
-       <input type="range" id="myRange1" name="myRange1" min="1" max="10" value="2" />
-     </div>
+    <section class="filter-container">
+        <section class="cat-container">
+        <select  name="categorias" class="cat cat1">
+        <option  value="" disabled selected>Categoría</option>
+          <option class="op" value="estructuras">Estructuras</option>
+          <option class="op" value="instalaciones">Instalaciones</option>
+          <option class="op" value="sostenibilidad">Sostenibilidad</option>
+        </select>
+        <select name="uso" class="cat cat2 selectuso">
+        <option value="" disabled selected>Uso</option>
+          <option value="parquing">Parquing</option>
+          <option value="centroatencionprimaria">Centro Atención Primária</option>
+          <option value="civil">Civil</option>
+          <option value="comercial">Comercial</option>
+          <option value="cultural">Cultural</option>
+          <option value="docente">Docente</option>
+          <option value="deportivo">Deportivo</option>
+          <option value="hospitalario">Hospitalario</option>
+          <option value="hotelero">Hotelero</option>
+          <option value="industrial">Industrial</option>
+          <option value="oficinas">Oficinas</option>
+          <option value="recintofiral">Recinto Firal</option>
+          <option value="residencial">Residencial</option>
+          <option value="servicios">Servicios</option>
+          <option value="sociosanitario">Sociosanitario</option>
     
-    <div class="select-range">
-    <label for="myRange">Año</label>
-       <input type="range" id="myRange2" name="myRange2" min="1990" max="2019" value="1990"/>
-    </div>
-       
-    </section>
-    </section>
-    <section class="projects-container">
-            <div class="project project1"  onclick="location.href='https://bis.brandsholdingcompany.com/lycee-francais/'" data-category="edificios">
-                <img class="image-project" src="https://bis.brandsholdingcompany.com/wp-content/uploads/2022/12/SG1771_0319-2-scaled.jpg" alt="Lyvée Francais">
-                <div class="text-project-container">
-                    <h3>Lycée Français</h3>
-                    <p>La escuela infantil del Liceo Francés de Barcelona se sitúa en la calle Munner</p>
-    
-                </div>
-            </div>
-            <div class="project project2" onclick="location.href='https://bis.brandsholdingcompany.com/nueva-clinica-girona/'" data-category="hospitales">
-                <img class="image-project" src="https://bis.brandsholdingcompany.com/wp-content/uploads/2022/12/ALÇAT-def-scaled.jpg" alt="Nueva Clínica Girona">
-                <div class="text-project-container">
-                    <h3>Nueva Clínica Girona</h3>
-                    <p>La Nueva Clínica Girona tiene forma rectangular y se divide en dos bloques extremos (A y C) y un bloque central (B).</p>
-    
-                </div>
-            </div>
-            <div class="project project3" onclick="location.href='https://bis.brandsholdingcompany.com/passeig-de-la-vall-dhebron/'" data-category="estadios">
-                <img class="image-project" src="https://bis.brandsholdingcompany.com/wp-content/uploads/2022/10/PICT2663.jpg" alt="Passeig de la Vall d’Hebron">
-                <div class="text-project-container">
-                    <h3>Passeig de la Vall d’Hebron</h3>
-                    <p>El proyecto realizado consistía en la creación de una unidad para pacientes hospitalizados por quemaduras. </p>
-    
-                </div>
-            </div>
-            <div class=" project4 big-project" onclick="location.href='https://bis.brandsholdingcompany.com/generalitat-barcelona/'" data-category="estadios">
-                <img class="image-big-project" src="https://bis.brandsholdingcompany.com/wp-content/uploads/2022/12/Perspectiva-05-scaled.jpg" alt=" Generalitat Barcelona">
-                <div class="text-project-container">
-                    <h3>Oficinas Campus Administrativo de la Generalitat Barcelona</h3>
-                    <p>Proyecto de obra nueva situado en la Zona Franca de Barcelona destinado a oficinas que consta de una planta sótano, un semisótano y 6 plantas sobre rasante y dividido en tres grandes zonas: Torre A, B y zona Central.</p>
-    
-                </div>
-            </div>
-    
-            <div class="project project5" data-category="estadios">
-                <img class="image-project" src="https://bis.brandsholdingcompany.com/wp-content/uploads/2022/12/SG1771_0319-2-scaled.jpg" alt="Lyvée Francais">
-                <div class="text-project-container">
-                    <h3>Lycée Francés</h3>
-                    <p>La escuela infantil del Liceo Francés de Barcelona se sitúa en la calle Munner</p>
-    
-                </div>
-            </div>
-            <div class="project project6" data-category="estadios">
-                <img class="image-project" src="https://bis.brandsholdingcompany.com/wp-content/uploads/2022/12/SG1771_0319-2-scaled.jpg" alt="Lyvée Francais">
-                <div class="text-project-container">
-                    <h3>Lycée Francés</h3>
-                    <p>La escuela infantil del Liceo Francés de Barcelona se sitúa en la calle Munner</p>
-    
-                </div>
-            </div>
-            <div class="project project3" data-category="estadios">
-                <img class="image-project" src="https://bis.brandsholdingcompany.com/wp-content/uploads/2022/12/SG1771_0319-2-scaled.jpg" alt="Lyvée Francais">
-                <div class="text-project-container">
-                    <h3>Lycée Francés</h3>
-                    <p>La escuela infantil del Liceo Francés de Barcelona se sitúa en la calle Munner</p>
-    
-                </div>
-            </div>
-            <div class="project4 big-project" data-category="estadios">
-                <img class="image-big-project" src="https://bis.brandsholdingcompany.com/wp-content/uploads/2022/12/SG1771_0319-2-scaled.jpg" alt="Lyvée Francais">
-                <div class="text-project-container">
-                    <h3>Lycée Francés</h3>
-                    <p>La escuela infantil del Liceo Francés de Barcelona se sitúa en la calle Munner</p>
-    
-                </div>
-            </div>
+        </select>
+        <select name="ubicacion" class="cat cat3">
+        <option value="" disabled selected>Ubicación</option>
+          <option value="edificios">España</option>
+          <option value="hospitales">Colombia</option>
+          <option value="estadios">Ecuador</option>
+        </select>
+           </section>
+        <section class="range-cat">
+        <div class="select-range">
+        <label for="myRange">Tamaño</label>
+           <input type="range" id="myRange1" name="myRange1" min="1" max="10" value="2" />
+         </div>
+        
+        <div class="select-range">
+        <label for="myRange">Año</label>
+           <input type="range" id="myRange2" name="myRange2" min="1990" max="2019" value="1990"/>
+        </div>
+           
         </section>
+        </section>
+        <section class="projects-container">
+                <div class="project project1" data-category="estructuras" uso="parquing" onclick="location.href='https://bis.brandsholdingcompany.com/lycee-francais/'" data-category="edificios">
+                    <img class="image-project" src="https://bis.brandsholdingcompany.com/wp-content/uploads/2022/12/SG1771_0319-2-scaled.jpg" alt="Lyvée Francais">
+                    <div class="text-project-container">
+                        <h3>Lycée Français</h3>
+                        <p>La escuela infantil del Liceo Francés de Barcelona se sitúa en la calle Munner</p>
+        
+                    </div>
+                </div>
+                <div class="project project2" data-category="estructuras" uso="parquing" onclick="location.href='https://bis.brandsholdingcompany.com/nueva-clinica-girona/'" data-category="hospitales">
+                    <img class="image-project" src="https://bis.brandsholdingcompany.com/wp-content/uploads/2022/12/ALÇAT-def-scaled.jpg" alt="Nueva Clínica Girona">
+                    <div class="text-project-container">
+                        <h3>Nueva Clínica Girona</h3>
+                        <p>La Nueva Clínica Girona tiene forma rectangular y se divide en dos bloques extremos (A y C) y un bloque central (B).</p>
+        
+                    </div>
+                </div>
+                <div class="project project3" data-category="estructuras" uso="parquing" onclick="location.href='https://bis.brandsholdingcompany.com/passeig-de-la-vall-dhebron/'" data-category="estadios">
+                    <img class="image-project" src="https://bis.brandsholdingcompany.com/wp-content/uploads/2022/10/PICT2663.jpg" alt="Passeig de la Vall d’Hebron">
+                    <div class="text-project-container">
+                        <h3>Passeig de la Vall d’Hebron</h3>
+                        <p>El proyecto realizado consistía en la creación de una unidad para pacientes hospitalizados por quemaduras. </p>
+        
+                    </div>
+                </div>
+
+                <div class="project4 big-project" data-category="sostenibilidad" uso="cultural">
+                    <img class="image-big-project" src="https://bis.brandsholdingcompany.com/wp-content/uploads/2022/12/Palacio-Pons-y-Pascual_4-scaled.jpg" alt="Reforma y Rehabilitación del Palacio Pons y Pascual">
+                    <div class="text-project-container">
+                        <h3>Reforma y Rehabilitación del Palacio Pons y Pascual</h3>
+                        <p>Se trata de un edificio de oficinas situado en Barcelona, donde se pretende realizar una reforma y rehabilitación.</p>
+        
+                    </div>
+                </div>
+                <div class="project project5" data-category="instalaciones" uso="cultural" onclick="location.href='https://bis.brandsholdingcompany.com/hospital-de-mollet/'" data-category="hospitales">
+                    <img class="image-project" src="https://bis.brandsholdingcompany.com/wp-content/uploads/2022/12/PORTADA.jpg" alt="Hospital General Mollet Del Vallés">
+                    <div class="text-project-container">
+                        <h3>Hospital General Mollet Del Vallés</h3>
+                        <p>El proyecto del nuevo Hospital de Mollet se plantea como un volumen horizontal calado por patios de luz, que se adecúa a la topografía.</p>
+        
+                    </div>
+                </div>
+                <div class="project project6" uso="cultural" data-category="instalaciones" onclick="location.href='https://bis.brandsholdingcompany.com/estadio-johan-cruyff/'">
+                    <img class="image-project" src="https://bis.brandsholdingcompany.com/wp-content/uploads/2022/10/mini-estadi.jpg" alt="Nuevo Mini estadio FCB Sant Joan Despí">
+                    <div class="text-project-container">
+                        <h3>Nuevo Mini estadio FCB Sant Joan Despí</h3>
+                        <p>El proyecto pretende ubicar las nuevas instalaciones del Mini estadio dentro del complejo deportivo Joan Gamper de Sant Joan Despí</p>
+        
+                    </div>
+                </div>
+                <div class="project project7" uso="cultural" data-category="instalaciones" onclick="location.href='https://bis.brandsholdingcompany.com/hospital-de-reus/'">
+                    <img class="image-project" src="https://bis.brandsholdingcompany.com/wp-content/uploads/2022/12/N7X0717.jpg" alt="Hospital Universitario Sant Joan De Reus">
+                    <div class="text-project-container">
+                        <h3>Hospital Universitario Sant Joan De Reus</h3>
+                        <p>El nuevo Hospital de Sant Joan de Reus tiene una superficie total construida de 84.000 m². </p>
+        
+                    </div>
+                </div>
+                <div class="project8 big-project" uso="cultural" data-category="instalaciones">
+                    <img class="image-big-project" src="https://bis.brandsholdingcompany.com/wp-content/uploads/2022/12/Palacio-Pons-y-Pascual_4-scaled.jpg" alt="Reforma y Rehabilitación del Palacio Pons y Pascual">
+                    <div class="text-project-container">
+                        <h3>Reforma y Rehabilitación del Palacio Pons y Pascual</h3>
+                        <p>Se trata de un edificio de oficinas situado en Barcelona, donde se pretende realizar una reforma y rehabilitación.</p>
+        
+                    </div>
+                </div>
+            </div>
+            <div class="project project9" data-category="instalaciones" onclick="location.href='https://bis.brandsholdingcompany.com/cupula-sant-andreu/'" data-category="hospitales">
+                <img class="image-project" src="https://bis.brandsholdingcompany.com/wp-content/uploads/2022/12/lavanguardia1.jpeg" alt="Cúpula de Sant Andreu del Palomar">
+                <div class="text-project-container">
+                    <h3>Cúpula de Sant Andreu del Palomar</h3>
+                    <p>Proyecto de rehabilitación de la gran cúpula de la parroquia de San Andrés del Palomar</p>
+    
+                </div>
+            </div>
+            <div class="project project10" data-category="instalaciones" onclick="location.href='https://bis.brandsholdingcompany.com/estadio-johan-cruyff/'">
+                <img class="image-project" src="https://bis.brandsholdingcompany.com/wp-content/uploads/2022/10/mini-estadi.jpg" alt="Nuevo Mini estadio FCB Sant Joan Despí">
+                <div class="text-project-container">
+                    <h3>Nuevo Mini estadio FCB Sant Joan Despí</h3>
+                    <p>El proyecto pretende ubicar las nuevas instalaciones del Mini estadio dentro del complejo deportivo Joan Gamper de Sant Joan Despí</p>
+    
+                </div>
+            </div>
+            <div class="project project11" data-category="instalaciones" onclick="location.href='https://bis.brandsholdingcompany.com/hospital-de-reus/'">
+                <img class="image-project" src="https://bis.brandsholdingcompany.com/wp-content/uploads/2022/12/N7X0717.jpg" alt="Hospital Universitario Sant Joan De Reus">
+                <div class="text-project-container">
+                    <h3>Hospital Universitario Sant Joan De Reus</h3>
+                    <p>El nuevo Hospital de Sant Joan de Reus tiene una superficie total construida de 84.000 m². </p>
+    
+                </div>
+            </div>
+            <div class="project12 big-project" data-category="instalaciones">
+                <img class="image-big-project" src="https://bis.brandsholdingcompany.com/wp-content/uploads/2022/12/Palacio-Pons-y-Pascual_4-scaled.jpg" alt="Reforma y Rehabilitación del Palacio Pons y Pascual">
+                <div class="text-project-container">
+                    <h3>Reforma y Rehabilitación del Palacio Pons y Pascual</h3>
+                    <p>Se trata de un edificio de oficinas situado en Barcelona, donde se pretende realizar una reforma y rehabilitación.</p>
+    
+                </div>
+            </div>
+            <div class="project project13" data-category="sostenibilidad" onclick="location.href='https://bis.brandsholdingcompany.com/hospital-puyo/'" data-category="hospitales">
+                <img class="image-project" src="https://bis.brandsholdingcompany.com/wp-content/uploads/2022/12/PORTADA-1.jpg" alt="Hospital Paramétrico de Puyo">
+                <div class="text-project-container">
+                    <h3>Hospital Paramétrico de Puyo</h3>
+                    <p>El edificio se basa en la creación de tres grandes franjas que dividen el Hospital en sus tres usos principales:</p>
+    
+                </div>
+            </div>
+            <div class="project project14" data-category="sostenibilidad" onclick="location.href='https://bis.brandsholdingcompany.com/complejo-hammam-righa/'">
+                <img class="image-project" src="https://bis.brandsholdingcompany.com/wp-content/uploads/2022/12/Imagen1-1-1.png" alt="Complejo Hammam Righa">
+                <div class="text-project-container">
+                    <h3>Complejo Hammam Righa</h3>
+                    <p>El proyecto contempla la rehabilitación de todo el complejo Zaccar en dos fases. </p>
+    
+                </div>
+            </div>
+            <div class="project project15" data-category="sostenibilidad" onclick="location.href='https://bis.brandsholdingcompany.com/hammam-salihine/'">
+                <img class="image-project" src="https://bis.brandsholdingcompany.com/wp-content/uploads/2022/12/HS_01_BUNGALOWS_P-1-1-scaled.jpg" alt="Complejo Hammam Salihine">
+                <div class="text-project-container">
+                    <h3>Complejo Hammam Salihine</h3>
+                    <p>Proyecto que contempla un balneario, situado en la parte norte de Argelia. </p>
+    
+                </div>
+            </div>
+            <div class="project16 big-project" data-category="sostenibilidad" onclick="location.href='https://bis.brandsholdingcompany.com/nuevo-hospital-general-en-manta/'">
+                <img class="image-big-project" src="https://bis.brandsholdingcompany.com/wp-content/uploads/2022/12/2-1.jpg" alt="Nuevo Hospital General en Manta">
+                <div class="text-project-container">
+                    <h3>Nuevo Hospital General en Manta</h3>
+                    <p>El nuevo Hospital General del IESS de Manta tiene un área de 3Has (aprox.).</p>
+    
+                </div>
+            </div>
+            </section>
+        
+    
     
     
     
