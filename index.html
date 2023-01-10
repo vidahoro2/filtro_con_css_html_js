@@ -44,16 +44,19 @@
               <option value="argelia">Argelia</option>
         </select>
            </section>
-           
+
         <section class="range-cat">
         <div class="select-range">
         <label for="myRange">Tamaño</label>
-           <input type="range" id="myRange1" name="myRange1" min="1" max="10" value="9" />
+           <input type="range" id="myRange1" name="myRange1" min="206" max="100000" value="206" oninput="rangeSize.value=value" />
+           <output id="rangeSize" >206  </output><p style="display: inline-block;">m²</p>
+
          </div>
         
         <div class="select-range">
         <label for="myRange">Año</label>
-           <input type="range" id="myRange2" name="myRange2" min="1990" max="2022" value="2022"/>
+           <input type="range" id="myRange2" name="myRange2" min="1990" max="2022" value="206" oninput="rangeYear.value=value"/>
+           <output id="rangeYear">1990 </output><p style="display: inline-block;"></p>
         </div>
            
         </section>
