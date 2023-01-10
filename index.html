@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <title>Document</title>
+    <title>Bis Projects</title>
 </head>
 <body>
     <section class="filter-container">
@@ -39,7 +39,6 @@
     <select name="ubicacion" class="cat cat3 selectPlace">
         <option value="" disabled selected>Ubicación</option>
           <option value="españa">España</option>
-          <option value="andorra">Andorra</option>
           <option value="ecuador">Ecuador</option>
               <option value="argelia">Argelia</option>
         </select>
@@ -55,35 +54,35 @@
         
         <div class="select-range">
         <label for="myRange">Año</label>
-           <input type="range" id="myRange2" name="myRange2" min="1990" max="2022" value="206" oninput="rangeYear.value=value"/>
-           <output id="rangeYear">1990 </output><p style="display: inline-block;"></p>
+           <input type="range" id="rangeYearIn" name="rangeYearIn" min="1990" max="2022" value="206" oninput="rangeYearOut.value=value"/>
+           <output id="rangeYearOut">1990 </output><p style="display: inline-block;"></p>
         </div>
            
         </section>
         </section>
         <section class="projects-container">
-                <div class="project project1" onclick="location.href='https://bis.brandsholdingcompany.com/lycee-francais/'" data-category="estructuras" ubicacion="españa"  uso="centroatencionprimaria">
+                <div class="project project1" onclick="location.href='https://bis.brandsholdingcompany.com/lycee-francais/'" data-category="estructuras" ubicacion="españa"  uso="centroatencionprimaria" year="2015 2016 2017">
                     <img class="image-project" src="https://bis.brandsholdingcompany.com/wp-content/uploads/2022/12/SG1771_0319-2-scaled.jpg" alt="Lyvée Francais">
                     <div class="text-project-container">
                         <h3>Lycée Français</h3>
                         <p>La escuela infantil del Liceo Francés de Barcelona se sitúa en la calle Munner</p>
                     </div>
                 </div>
-                <div class="project project2" onclick="location.href='https://bis.brandsholdingcompany.com/nueva-clinica-girona/'" data-category="estructuras" ubicacion="españa"  uso="hospitalario"  >
+                <div class="project project2" onclick="location.href='https://bis.brandsholdingcompany.com/nueva-clinica-girona/'" data-category="estructuras" ubicacion="españa"  uso="hospitalario" year="2016 2018 2019 2020" >
                     <img class="image-project" src="https://bis.brandsholdingcompany.com/wp-content/uploads/2022/12/ALÇAT-def-scaled.jpg" alt="Nueva Clínica Girona">
                     <div class="text-project-container">
                         <h3>Nueva Clínica Girona</h3>
                         <p>La Nueva Clínica Girona tiene forma rectangular y se divide en dos bloques extremos (A y C) y un bloque central (B).</p>
                     </div>
                 </div>
-                <div class="project project3" onclick="location.href='https://bis.brandsholdingcompany.com/passeig-de-la-vall-dhebron/'" data-category="estructuras" ubicacion="españa"  uso="hospitalario"  >
+                <div class="project project3" onclick="location.href='https://bis.brandsholdingcompany.com/passeig-de-la-vall-dhebron/'" data-category="estructuras" ubicacion="españa"  uso="hospitalario" year="2002 2004 2004 2005 2006" >
                     <img class="image-project" src="https://bis.brandsholdingcompany.com/wp-content/uploads/2022/10/Vall-Hebron.jpg" alt="Passeig de la Vall d’Hebron">
                     <div class="text-project-container">
                         <h3>Passeig de la Vall d’Hebron</h3>
                         <p>El proyecto realizado consistía en la creación de una unidad para pacientes hospitalizados por quemaduras. </p>
                     </div>
                 </div>
-                <div class="project4 big-project" onclick="location.href='https://bis.brandsholdingcompany.com/generalitat-barcelona/'" data-category="estructuras" ubicacion="españa"  uso="oficinas">
+                <div class="project4 big-project" onclick="location.href='https://bis.brandsholdingcompany.com/generalitat-barcelona/'" data-category="estructuras" ubicacion="españa"  uso="oficinas" year="2015 2016 2017">
                     <img class="image-big-project" src="https://bis.brandsholdingcompany.com/wp-content/uploads/2022/12/Perspectiva-05-scaled.jpg" alt=" Generalitat Barcelona">
                     <div class="text-project-container">
                         <h3>Oficinas Campus Administrativo de la Generalitat Barcelona</h3>
@@ -105,7 +104,7 @@
                     </div>
                 </div>
                 <div class="project project7" onclick="location.href='https://bis.brandsholdingcompany.com/hospital-de-reus/'" data-category="instalaciones" ubicacion="españa"  uso="hospitalario">
-                    <img class="image-project" src="https://bis.brandsholdingcompany.com/wp-content/uploads/2022/12/N7X0717.jpg" alt="Hospital Universitario Sant Joan De Reus">
+                    <img id="image7" class="image-project" src="https://bis.brandsholdingcompany.com/wp-content/uploads/2022/12/N7X0717.jpg" alt="Hospital Universitario Sant Joan De Reus">
                     <div class="text-project-container">
                         <h3>Hospital Universitario Sant Joan De Reus</h3>
                         <p>El nuevo Hospital de Sant Joan de Reus tiene una superficie total construida de 84.000 m². </p>
@@ -141,7 +140,7 @@
                         </div>
                     </div>
                     <div class="project12 big-project" onclick="location.href='https://bis.brandsholdingcompany.com/nuevo-hospital-general-en-manta/'" data-category="sostenibilidad" ubicacion="ecuador"  uso="hospitalario" >
-                        <img class="image-big-project" src="https://bis.brandsholdingcompany.com/wp-content/uploads/2022/12/2-1.jpg" alt="Nuevo Hospital General en Manta">
+                        <img id="image12" class="image-big-project" src="https://bis.brandsholdingcompany.com/wp-content/uploads/2022/12/2-1.jpg" alt="Nuevo Hospital General en Manta">
                         <div class="text-project-container">
                             <h3>Nuevo Hospital General en Manta</h3>
                             <p>El nuevo Hospital General del IESS de Manta tiene un área de 3Has (aprox.).</p>

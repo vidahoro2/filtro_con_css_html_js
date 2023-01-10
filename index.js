@@ -4,6 +4,16 @@ const ubicaciones =['españa','andorra','ecuador','marruecos','argelia']
 const select = document.querySelector('select');
 const select2 = document.querySelector('.selectuso');
 const select3 = document.querySelector('.selectPlace');
+const rangeSize = document.getElementById("rangeSize");
+const rangeYearIn = document.querySelector('#rangeYearIn');
+// let rangeSizeValues = rangeSize.valueAsNumber;
+// let rangeYearValues =  rangeYearIn.valueAsNumber;
+
+const project7 = document.querySelector('.project7');
+const project12 = document.querySelector('.project12');
+const image7 = document.querySelector('#image7');
+const imageBigProject12 = document.querySelector('#image12');
+
 let style = document.createElement('style');
 
 const categoria = select.addEventListener('change',()=>{
@@ -60,8 +70,16 @@ const uso =select2.addEventListener('change',()=>{
         style.innerHTML = '[uso="parquing"],[uso="centroatencionprimaria"],[uso="civil"],[uso="comercial"],[uso="cultural"],[uso="docente"],[uso="hospitalario"],[uso="hotelero"],[uso="industrial"],[uso="oficinas"],[uso="recintofiral"],[uso="residencial"],[uso="servicios"],[uso="sociosanitario"]{display:none;}'
         document.head.appendChild(style);
 
-    }
+    }//Hospitalario
     if(select2.value == usos[7]){
+        project7.classList.remove('project');
+        project7.classList.add('big-project,project8');
+        image7.classList.remove('image-project');
+        image7.classList.add('image-big-project');
+        project12.classList.remove('big-project');
+        project12.classList.add('project');
+        imageBigProject12.classList.remove('image-big-project');
+        imageBigProject12.classList.add('image-project');
         style.innerHTML = '[uso="parquing"],[uso="centroatencionprimaria"],[uso="civil"],[uso="comercial"],[uso="cultural"],[uso="docente"],[uso="deportivo"],[uso="hotelero"],[uso="industrial"],[uso="oficinas"],[uso="recintofiral"],[uso="residencial"],[uso="servicios"],[uso="sociosanitario"]{display:none;}'
         document.head.appendChild(style);
 
@@ -112,18 +130,23 @@ const uso =select2.addEventListener('change',()=>{
 
 
 const ubicacion = select3.addEventListener('change',()=>{
-
+    //España
     if (select3.value == ubicaciones[0]){
         style.innerHTML = '[ubicacion="andorra"],[ubicacion="ecuador"],[ubicacion="marruecos"],[ubicacion="argelia"]{display:none;}'
         document.head.appendChild(style);
-    }
+    }//Andorra
     if (select3.value == ubicaciones[1]){
         style.innerHTML = '[ubicacion="españa"],[ubicacion="ecuador"],[ubicacion="marruecos"],[ubicacion="argelia"]{display:none;}'
         document.head.appendChild(style);
-    }
+    }  //Ecuador
     if (select3.value == ubicaciones[2]){
+        project12.classList.remove('big-project');
+        project12.classList.add('project');
+        imageBigProject12.classList.remove('image-big-project');
+        imageBigProject12.classList.add('image-project');
         style.innerHTML = '[ubicacion="españa"],[ubicacion="andorra"],[ubicacion="marruecos"],[ubicacion="argelia"]{display:none;}'
         document.head.appendChild(style);
+
     }
     if (select3.value == ubicaciones[3]){
         style.innerHTML = '[ubicacion="españa"],[ubicacion="andorra"],[ubicacion="ecuador"],[ubicacion="argelia"]{display:none;}'
@@ -134,6 +157,13 @@ const ubicacion = select3.addEventListener('change',()=>{
         document.head.appendChild(style);
     }
 
+
+});
+
+
+rangeYearIn.addEventListener('change',()=>{
+
+    console.log("el valor se ha cambiado a: ", rangeYearIn.valueAsNumber);
 
 });
 
