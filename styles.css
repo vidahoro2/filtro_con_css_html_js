@@ -118,7 +118,10 @@ input[type="range"]::-webkit-slider-thumb {
 .project16{
     margin-bottom: 8rem !important;  
  }
-
+.espacioabajo{
+    margin-bottom: 8rem !important;
+    margin-top:-2rem;
+}
 [value="edificios"]:change ~ .projects-container .project:not([data-category~="edificios"]){
     display:none;
 }

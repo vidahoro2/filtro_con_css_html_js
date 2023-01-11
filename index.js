@@ -6,12 +6,23 @@ const select2 = document.querySelector('.selectuso');
 const select3 = document.querySelector('.selectPlace');
 const rangeSize = document.getElementById("rangeSize");
 const rangeYearIn = document.querySelector('#rangeYearIn');
-// let rangeSizeValues = rangeSize.valueAsNumber;
-// let rangeYearValues =  rangeYearIn.valueAsNumber;
 
+
+const project4 = document.querySelector('.project4');
+const project6 = document.querySelector('.project6');
 const project7 = document.querySelector('.project7');
+const project8 = document.querySelector('.project8');
+const project10 = document.querySelector('.project10')
 const project12 = document.querySelector('.project12');
+const project15 = document.querySelector('.project15');
+const project16 = document.querySelector('.project16');
+const image4 = document.querySelector('#image4');
+const image6 = document.querySelector('#image6');
 const image7 = document.querySelector('#image7');
+const image8 = document.querySelector('#image8');
+const image10 = document.querySelector('#image10');
+const image15 = document.querySelector('#image15');
+const image16 = document.querySelector('#image16');
 const imageBigProject12 = document.querySelector('#image12');
 
 let style = document.createElement('style');
@@ -163,7 +174,61 @@ const ubicacion = select3.addEventListener('change',()=>{
 
 rangeYearIn.addEventListener('change',()=>{
 
-    console.log("el valor se ha cambiado a: ", rangeYearIn.valueAsNumber);
+    if(rangeYearIn.valueAsNumber >= 2002 && rangeYearIn.valueAsNumber <= 2006 ){
+        style.innerHTML = '.project1,.project2,.project4,.project5,.project6,.project7,.project8,.project9,.project10,.project11,.project12,.project13,.project14,.project15,.project16,.project17{display:none;}'
+        document.head.appendChild(style);
+    }
+
+    if(rangeYearIn.valueAsNumber >= 2007 && rangeYearIn.valueAsNumber <= 2011 ){
+        style.innerHTML = '.project1,.project2,.project3,.project4,.project6,.project8,.project10,.project11,.project12,.project13,.project14,.project15,.project16,.project17{display:none;}'
+        document.head.appendChild(style);
+    }
+
+    if(rangeYearIn.valueAsNumber >= 2012 && rangeYearIn.valueAsNumber <= 2016 ){
+        project4.classList.remove('big-project');
+        project4.classList.add('project');
+        image4.classList.remove('image-big-project');
+        image4.classList.add('image-project');
+        project10.classList.remove('project');
+        project10.classList.add('big-project');
+        project12.classList.remove('big-project');
+        project12.classList.add('project');
+        imageBigProject12.classList.remove('image-big-project');
+        imageBigProject12.classList.add('image-project');
+        project15.classList.remove('project');
+        project15.classList.add("big-project","espacioabajo");
+        image10.classList.remove('image-project');
+        image10.classList.add('image-big-project');
+        image15.classList.remove('image-project');
+        image15.classList.add('image-big-project');
+        project16.classList.remove('big-project');
+        project16.classList.add('project');
+        image16.classList.remove('image-big-project');
+        image16.classList.add('image-project');
+        style.innerHTML = '.project3,.project5,.project6,.project7,.project8,.project9,.project11{display:none;}'
+        document.head.appendChild(style);
+    }
+    if(rangeYearIn.valueAsNumber >= 2017 && rangeYearIn.valueAsNumber <= 2022  ){
+        project4.classList.remove('big-project');
+        project4.classList.add('project');
+        image4.classList.remove('image-big-project');
+        image4.classList.add('image-project');
+        project6.classList.remove('project');
+        project6.classList.add('big-project','espacioabajo');
+        image6.classList.remove('image-project');
+        image6.classList.add('image-big-project');
+        project8.classList.remove('big-project');
+        project8.classList.add('project');
+        image8.classList.remove('image-big-project');
+        image8.classList.add('image-project');
+        project12.classList.remove('big-project');
+        project12.classList.add('project');
+        imageBigProject12.classList.remove('image-big-project');
+        imageBigProject12.classList.add('image-project');
+        style.innerHTML = '.project3,.project5,.project7,.project9,.project10,.project13,.project14,.project15,.project16,.project17{display:none;}'
+        document.head.appendChild(style);
+    }
+
 
 });
 
