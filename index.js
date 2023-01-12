@@ -4,7 +4,7 @@ const ubicaciones =['españa','andorra','ecuador','marruecos','argelia']
 const select = document.querySelector('select');
 const select2 = document.querySelector('.selectuso');
 const select3 = document.querySelector('.selectPlace');
-const rangeSize = document.getElementById("rangeSize");
+const rangeSizeIn = document.querySelector('#rangeSizeIn');
 const rangeYearIn = document.querySelector('#rangeYearIn');
 
 
@@ -232,3 +232,27 @@ rangeYearIn.addEventListener('change',()=>{
 
 });
 
+rangeSizeIn.addEventListener('change',()=>{
+
+    if(rangeSizeIn.valueAsNumber >= 2000 && rangeSizeIn.valueAsNumber <= 20000 ){
+        style.innerHTML = '.project2,.project4,.project5,.project7,.project10,.project11,.project12,.project14{display:none;}'
+        document.head.appendChild(style);
+    }
+    if(rangeSizeIn.valueAsNumber >= 20000 && rangeSizeIn.valueAsNumber <= 50000 ){
+        style.innerHTML = '.project1,.project3,.project4,.project6,.project7,.project8,.project9,.project10,.project13,.project14,.project15,.project16,.project17{display:none;}'
+        document.head.appendChild(style);
+    }
+    if(rangeSizeIn.valueAsNumber >= 50000 && rangeSizeIn.valueAsNumber <= 80000 ){
+        project4.classList.remove('big-project');
+        project4.classList.add('project');
+        image4.classList.remove('image-big-project');
+        image4.classList.add('image-project');
+        style.innerHTML = '.project1,.project2,.project3,.project5,.project6,.project7,.project8,.project9,.project11,.project12,.project13,.project14,.project15,.project16,.project17{display:none;}'
+        document.head.appendChild(style);
+    }
+    if(rangeSizeIn.valueAsNumber >= 140000 && rangeSizeIn.valueAsNumber <= 180000 ){
+        style.innerHTML = '.project1,.project2,.project3,.project4,.project5,.project6,.project7,.project8,.project9,.project10,.project11,.project12,.project13,.project15,.project16,.project17{display:none;}'
+        document.head.appendChild(style);
+    }
+
+});
