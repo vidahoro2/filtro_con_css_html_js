@@ -35,33 +35,73 @@
           <option value="servicios">Servicios</option>
           <option value="sociosanitario">Sociosanitario</option>
     
+    </select>
+        <select name="ubicacion" class="cat cat3 selectPlace">
+            <option value="" disabled selected>Ubicación</option>
+            <option value="españa">España</option>
+            <option value="ecuador">Ecuador</option>
+            <option value="argelia">Argelia</option>
         </select>
-    <select name="ubicacion" class="cat cat3 selectPlace">
-        <option value="" disabled selected>Ubicación</option>
-          <option value="españa">España</option>
-          <option value="ecuador">Ecuador</option>
-              <option value="argelia">Argelia</option>
-        </select>
-           </section>
+        </section>
 
-        <section class="range-cat">
+        <!-- <section class="range-cat">
         <div class="select-range">
         <label for="myRange">Tamaño</label>
+        
            <input type="range" id="rangeSizeIn" name="rangeSizeIn" min="2000" max="180000" value="2000" oninput="rangeSizeOut.value=value" />
            <output id="rangeSizeOut" >2000  </output><p style="display: inline-block;">m²</p>
 
-         </div>
-        
+        </div>
+
         <div class="select-range">
         <label for="myRange">Año</label>
            <input type="range" id="rangeYearIn" name="rangeYearIn" min="1998" max="2022" value="206" step="2" oninput="rangeYearOut.value=value"/>
            <output id="rangeYearOut">1998 </output><p style="display: inline-block;"></p>
         </div>
-           
+
+        </section> -->
+        <section class="range-cat">
+            <div class="range_container">
+                <p>Tamaño</p>
+                <div class="sliders_control">
+                    <input id="fromSlider" type="range" value="3000" min="2000" max="180000"/>
+                    <input id="toSlider" type="range" value="80000" min="2000" max="180000"/>
+                </div>
+                <div class="form_control">
+                    <div class="form_control_container">
+                        <div class="form_control_container__time"></div>
+                        <input class="form_control_container__time__input" type="number" id="fromInput" value="3000" min="2000" max="180000"/>
+                    </div>
+                    <div class="form_control_container">
+                        <div class="form_control_container__time"></div>
+                        <input class="form_control_container__time__input" type="number" id="toInput" value="80000" min="2000" max="180000"/>
+                    </div>
+                </div>
+            </div> 
+            
+            <div class="range_container">
+                <p>Año</p>
+                <div class="sliders_control">
+                    <input id="fromSlider2" type="range" value="2000" min="1998" max="2022"/>
+                    <input id="toSlider2" type="range" value="2013" min="1998" max="2022"/>
+                </div>
+                <div class="form_control">
+                    <div class="form_control_container">
+                        <div class="form_control_container__time"></div>
+                        <input class="form_control_container__time__input" type="number" id="fromInput2" value="2000" min="0" max="2022"/>
+                    </div>
+                    <div class="form_control_container">
+                        <div class="form_control_container__time"></div>
+                        <input class="form_control_container__time__input" type="number" id="toInput2" value="2013" min="1998" max="2022"/>
+                    </div>
+                </div>
+            </div>
+
         </section>
+
         </section>
         <section class="projects-container">
-                <div class="project project1" onclick="location.href='https://bis.brandsholdingcompany.com/lycee-francais/'" data-category="estructuras" ubicacion="españa"  uso="centroatencionprimaria" year="2015 2016 2017" size="3400">
+                <div class="project project1" onclick="location.href='https://bis.brandsholdingcompany.com/lycee-francais/'" data-category="estructuras" ubicacion="españa"  uso="docente" year="2015 2016 2017" size="3400">
                     <img class="image-project" src="https://bis.brandsholdingcompany.com/wp-content/uploads/2022/12/SG1771_0319-2-scaled.jpg" alt="Lyvée Francais">
                     <div class="text-project-container">
                         <h3>Lycée Français</h3>
@@ -124,14 +164,14 @@
                             <p>Proyecto de rehabilitación de la gran cúpula de la parroquia de San Andrés del Palomar</p>
                         </div>
                     </div>
-                    <div class="project project10" onclick="location.href='https://bis.brandsholdingcompany.com/complejo-hammam-righa/'" data-category="sostenibilidad" ubicacion="argelia"  uso="servicios" year="2013 2014" size="51690">
+                    <div class="project project10" onclick="location.href='https://bis.brandsholdingcompany.com/complejo-hammam-righa/'" data-category="sostenibilidad" ubicacion="argelia"  uso="hotelero" year="2013 2014" size="51690">
                         <img id="image10" class="image-project" src="https://bis.brandsholdingcompany.com/wp-content/uploads/2022/12/Imagen1-1-1.png" alt="Complejo Hammam Righa">
                         <div class="text-project-container">
                             <h3>Complejo Hammam Righa</h3>
                             <p>El proyecto contempla la rehabilitación de todo el complejo Zaccar en dos fases. </p>
                         </div>
                     </div>
-                    <div class="project project11" onclick="location.href='https://bis.brandsholdingcompany.com/hammam-salihine/'" data-category="sostenibilidad" ubicacion="argelia"  uso="cultural" year="2018" size="26014">
+                    <div class="project project11" onclick="location.href='https://bis.brandsholdingcompany.com/hammam-salihine/'" data-category="sostenibilidad" ubicacion="argelia"  uso="hotelero" year="2018" size="26014">
                         <img class="image-project" src="https://bis.brandsholdingcompany.com/wp-content/uploads/2022/12/HS_01_BUNGALOWS_P-1-1-scaled.jpg" alt="Complejo Hammam Salihine">
                         <div class="text-project-container">
                             <h3>Complejo Hammam Salihine</h3>
@@ -146,7 +186,7 @@
                             <p>El nuevo Hospital General del IESS de Manta tiene un área de 3Has (aprox.).</p>
                         </div>
                     </div>
-    <div class="project project13" onclick="location.href='https://bis.brandsholdingcompany.com/hospital-puyo/'" data-category="estructuras" ubicacion="ecuador"  uso="hospitalario" year="2012" size="15710">
+                    <div class="project project13" onclick="location.href='https://bis.brandsholdingcompany.com/hospital-puyo/'" data-category="estructuras" ubicacion="ecuador"  uso="hospitalario" year="2012" size="15710">
                         <img class="image-project" src="https://bis.brandsholdingcompany.com/wp-content/uploads/2022/12/PORTADA-1.jpg" alt="Hospital Paramétrico de Puyo">
                         <div class="text-project-container">
                             <h3>Hospital Paramétrico de Puyo</h3>
@@ -161,7 +201,7 @@
             
                         </div>
                     </div>
-                    <div class="project project15" onclick="location.href='https://bis.brandsholdingcompany.com/deposito-de-can-boada/'" data-category="estructuras" ubicacion="españa"  uso="cultural" year="2013" size="3460" >
+                    <div class="project project15" onclick="location.href='https://bis.brandsholdingcompany.com/deposito-de-can-boada/'" data-category="estructuras" ubicacion="españa"  uso="civil" year="2013" size="3460" >
                         <img id="image15" class="image-project" src="https://bis.brandsholdingcompany.com/wp-content/uploads/2022/12/Exterior-nucli-scaled.jpg" alt="Depósito de Can Boada">
                         <div class="text-project-container">
                             <h3>Depósito de Can Boada</h3>
@@ -169,7 +209,7 @@
             
                         </div>
                     </div>
-                    <div class="project16 big-project" onclick="location.href='https://bis.brandsholdingcompany.com/escuela-teresianes/'" data-category="estructuras" ubicacion="españa"  uso="deportivo" year="2013 2014" size="2764">
+                    <div class="project16 big-project" onclick="location.href='https://bis.brandsholdingcompany.com/escuela-teresianes/'" data-category="estructuras" ubicacion="españa"  uso="docente" year="2013 2014" size="2764">
                         <img id="image16" class="image-big-project" src="https://bis.brandsholdingcompany.com/wp-content/uploads/2022/12/Colegio-Teresianes-44-SG1416_7096-scaled.jpg" alt="Escuela Teresianes">
                         <div class="text-project-container">
                             <h3>Escuela Teresianes</h3>
@@ -177,18 +217,82 @@
             
                         </div>
                     </div>
-                    <div class="project project17"  onclick="location.href='https://bis.brandsholdingcompany.com/encants-school/'" data-category="instalaciones" ubicacion="españa"  uso="centroatencionprimaria" year="2014 2015" size="4150">
-                        <img class="image-project" src="https://bis.brandsholdingcompany.com/wp-content/uploads/2022/12/RGR_scene2-prueba2-scaled.jpg" alt="Encants School">
+                    <div class="project project17"  onclick="location.href='https://bis.brandsholdingcompany.com/encants-school/'" data-category="instalaciones" ubicacion="españa"  uso="docente" year="2014 2015" size="4150">
+                        <img id="image17" class="image-project" src="https://bis.brandsholdingcompany.com/wp-content/uploads/2022/12/RGR_scene2-prueba2-scaled.jpg" alt="Encants School">
                         <div class="text-project-container">
                             <h3>Encants School</h3>
                             <p>El edificio está organizado en dos bandas, con las aulas a cada lado y un amplio pasillo en el centro donde están  </p>
             
                         </div>
-                    </div
+                    </div>
+
+
+                    <div class="project project18" onclick="location.href='https://bis.brandsholdingcompany.com/oficinas-calle-badajoz/'" data-category="estructuras" ubicacion="españa"  uso="oficinas" year="2014 2015" size="168717">
+                        <img id="image18" class="image-project" src="https://bis.brandsholdingcompany.com/wp-content/uploads/2023/01/01-12.png" alt="Oficinas Calle Badajoz">
+                        <div class="text-project-container">
+                            <h3>Oficinas Calle Badajoz</h3>
+                            <p>Edificio de oficinas situado en la esquina de las calles Badajoz y Almogàvers del distrito de</p>
+            
+                        </div>
+                    </div>
+
+                    <div class="project project19" onclick="location.href='https://bis.brandsholdingcompany.com/hotel-pozo-amargo/'" data-category="estructuras" ubicacion="españa"  uso="hotelero" year="2013" size="3460" >
+                        <img id="image19" class="image-project" src="https://bis.brandsholdingcompany.com/wp-content/uploads/2023/01/02-11.png" alt="Hotel Pozo Amargo">
+                        <div class="text-project-container">
+                            <h3>Hotel Pozo Amargo</h3>
+                            <p>Agrupación de edificios residenciales abandonados de planta baja </p>
+            
+                        </div>
+                    </div>
+
+                    <div class="project20 big-project " onclick="location.href='https://bis.brandsholdingcompany.com/estadio-cubierto-de-atletismo/'" data-category="estructuras" ubicacion="españa"  uso="deportivo" >
+                    <img id="image20" class="image-big-project" src="https://bis.brandsholdingcompany.com/wp-content/uploads/2023/01/01-14.png" alt="Escuela Teresianes">
+                    <div class="text-project-container">
+                        <h3>Estadio Cubierto de Atletismo</h3>
+                        <p>Situada en un complejo deportivo en el barrio de San Oleguer.</p>
+        
+                    </div>
+                </div>
+                <div class="project project21"  onclick="location.href='https://bis.brandsholdingcompany.com/biblioteca-publica/'" data-category="instalaciones" ubicacion="españa"  uso="cultural" >
+                    <img id="image21" class="image-project" src="https://bis.brandsholdingcompany.com/wp-content/uploads/2023/01/01-15.png" alt="Biblioteca Pública">
+                    <div class="text-project-container">
+                        <h3>Biblioteca Pública</h3>
+                        <p>El edificio de la nueva sede de la biblioteca pública de Gerona </p>
+        
+                    </div>
+                </div>
+                    <div class="project project22" onclick="location.href='https://bis.brandsholdingcompany.com/pabellon-ferial-y-deportivo/'" data-category="estructuras" ubicacion="españa"  uso="deportivo" year="2014 2015" size="168717">
+                        <img class="image-project" src="https://bis.brandsholdingcompany.com/wp-content/uploads/2023/01/01-16.png" alt="Pabellón Ferial y Deportivo">
+                        <div class="text-project-container">
+                            <h3>Pabellón Ferial y Deportivo</h3>
+                            <p>El edificio consta de tres volúmenes diferenciados:</p>
+            
+                        </div>
+                    </div>
+                    <div class="project project23" onclick="location.href='https://bis.brandsholdingcompany.com/edificio-hospitalario-del-pspv/'" data-category="estructuras" ubicacion="españa"  uso="hospitalario" year="2013" size="3460" >
+                        <img id="image23" class="image-project" src="https://bis.brandsholdingcompany.com/wp-content/uploads/2023/01/02-11.png" alt="Edificio Hospitalario Polivalente del Pspv">
+                        <div class="text-project-container">
+                            <h3>Edificio Hospitalario Polivalente del Pspv</h3>
+                            <p>El edificio hospitalario polivalente del parque sanitario Pere Virgili  </p>
+            
+                        </div>
+                    </div>
+
+                <div class="project24 big-project espacioabajo" onclick="location.href='https://bis.brandsholdingcompany.com/edificio-hospitalario-arnau/'" data-category="estructuras" ubicacion="españa"  uso="hospitalario" >
+                    <img id="image24" class="image-big-project" src="https://bis.brandsholdingcompany.com/wp-content/uploads/2023/01/01-18.png" alt="Edificio Hospitalario">
+                    <div class="text-project-container">
+                        <h3>Edificio Hospitalario Polivalente del Arnau de Vilanova</h3>
+                        <p>El edificio hospitalario polivalente del hospital universitario Arnau</p>
+        
+                    </div>
+                </div>
+
+
             </section>
         
     
     <script src="index.js"></script>
+    
     
 </body>
 </html>
