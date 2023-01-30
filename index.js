@@ -36,3 +36,6 @@ const image24 = document.querySelector('#image24');
 const imageBigProject12 = document.querySelector('#image12');
 
 let style = document.createElement('style');
+
+
+const 
