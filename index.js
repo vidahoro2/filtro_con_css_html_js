@@ -38,4 +38,248 @@ const imageBigProject12 = document.querySelector('#image12');
 let style = document.createElement('style');
 
 
-const 
+
+//codigo para  la funcionalidad en apariencia del filtro Tamaño
+function controlFromInput(fromSlider, fromInput, toInput, controlSlider) {
+  const [from, to] = getParsed(fromInput, toInput);
+  fillSlider(fromInput, toInput, '#C6C6C6', '#515151', controlSlider);
+  if (from > to) {
+      fromSlider.value = to;
+      fromInput.value = to;
+  } else {
+      fromSlider.value = from;
+  }
+}
+  
+function controlToInput(toSlider, fromInput, toInput, controlSlider) {
+  const [from, to] = getParsed(fromInput, toInput);
+  fillSlider(fromInput, toInput, '#C6C6C6', '#515151', controlSlider);
+  setToggleAccessible(toInput);
+  if (from <= to) {
+      toSlider.value = to;
+      toInput.value = to;
+  } else {
+      toInput.value = from;
+  }
+}
+
+function controlFromSlider(fromSlider, toSlider, fromInput) {
+const [from, to] = getParsed(fromSlider, toSlider);
+fillSlider(fromSlider, toSlider, '#C6C6C6', '#515151', toSlider);
+if (from > to) {
+  fromSlider.value = to;
+  fromInput.value = to;
+} else {
+  fromInput.value = from;
+}
+}
+
+function controlToSlider(fromSlider, toSlider, toInput) {
+const [from, to] = getParsed(fromSlider, toSlider);
+fillSlider(fromSlider, toSlider, '#C6C6C6', '#515151', toSlider);
+setToggleAccessible(toSlider);
+if (from <= to) {
+  toSlider.value = to;
+  toInput.value = to;
+} else {
+  toInput.value = from;
+  toSlider.value = from;
+}
+}
+
+function getParsed(currentFrom, currentTo) {
+const from = parseInt(currentFrom.value, 10);
+const to = parseInt(currentTo.value, 10);
+return [from, to];
+}
+
+function fillSlider(from, to, sliderColor, rangeColor, controlSlider) {
+  const rangeDistance = to.max-to.min;
+  const fromPosition = from.value - to.min;
+  const toPosition = to.value - to.min;
+  controlSlider.style.background = `linear-gradient(
+    to right,
+    ${sliderColor} 0%,
+    ${sliderColor} ${(fromPosition)/(rangeDistance)*100}%,
+    ${rangeColor} ${((fromPosition)/(rangeDistance))*100}%,
+    ${rangeColor} ${(toPosition)/(rangeDistance)*100}%, 
+    ${sliderColor} ${(toPosition)/(rangeDistance)*100}%, 
+    ${sliderColor} 100%)`;
+}
+
+function setToggleAccessible(currentTarget) {
+const toSlider = document.querySelector('#toSlider');
+if (Number(currentTarget.value) <= 0 ) {
+  toSlider.style.zIndex = 2;
+} else {
+  toSlider.style.zIndex = 0;
+}
+}
+
+
+
+const fromSlider = document.querySelector('#fromSlider');
+const toSlider = document.querySelector('#toSlider');
+const fromInput = document.querySelector('#fromInput');
+const toInput = document.querySelector('#toInput');
+fillSlider(fromSlider, toSlider, '#C6C6C6', '#515151', toSlider);
+setToggleAccessible(toSlider);
+
+fromSlider.oninput = () => controlFromSlider(fromSlider, toSlider, fromInput);
+toSlider.oninput = () => controlToSlider(fromSlider, toSlider, toInput);
+fromInput.oninput = () => controlFromInput(fromSlider, fromInput, toInput, toSlider);
+toInput.oninput = () => controlToInput(toSlider, fromInput, toInput, toSlider);
+
+
+//codigo para  la funcionalidad en apariencia del filtro Año
+function controlfromInput2(fromSlider2, fromInput2, toInput2, controlSlider) {
+const [from, to] = getParsed(fromInput2, toInput2);
+fillSlider(fromInput2, toInput2, '#C6C6C6', '#515151', controlSlider);
+if (from > to) {
+    fromSlider2.value = to;
+    fromInput2.value = to;
+} else {
+    fromSlider2.value = from;
+}
+}
+
+function controltoInput22(toSlider2, fromInput2, toInput2, controlSlider) {
+const [from, to] = getParsed(fromInput2, toInput2);
+fillSlider(fromInput2, toInput2, '#C6C6C6', '#515151', controlSlider);
+setToggleAccessible(toInput2);
+if (from <= to) {
+    toSlider2.value = to;
+    toInput2.value = to;
+} else {
+    toInput2.value = from;
+}
+}
+
+function controlfromSlider2(fromSlider2, toSlider2, fromInput2) {
+const [from, to] = getParsed(fromSlider2, toSlider2);
+fillSlider(fromSlider2, toSlider2, '#C6C6C6', '#515151', toSlider2);
+if (from > to) {
+fromSlider2.value = to;
+fromInput2.value = to;
+} else {
+fromInput2.value = from;
+}
+}
+
+function controltoSlider2(fromSlider2, toSlider2, toInput2) {
+const [from, to] = getParsed(fromSlider2, toSlider2);
+fillSlider(fromSlider2, toSlider2, '#C6C6C6', '#515151', toSlider2);
+setToggleAccessible(toSlider2);
+if (from <= to) {
+toSlider2.value = to;
+toInput2.value = to;
+} else {
+toInput2.value = from;
+toSlider2.value = from;
+}
+}
+
+function getParsed(currentFrom, currentTo) {
+const from = parseInt(currentFrom.value, 10);
+const to = parseInt(currentTo.value, 10);
+return [from, to];
+}
+
+function fillSlider(from, to, sliderColor, rangeColor, controlSlider) {
+const rangeDistance = to.max-to.min;
+const fromPosition = from.value - to.min;
+const toPosition = to.value - to.min;
+controlSlider.style.background = `linear-gradient(
+  to right,
+  ${sliderColor} 0%,
+  ${sliderColor} ${(fromPosition)/(rangeDistance)*100}%,
+  ${rangeColor} ${((fromPosition)/(rangeDistance))*100}%,
+  ${rangeColor} ${(toPosition)/(rangeDistance)*100}%, 
+  ${sliderColor} ${(toPosition)/(rangeDistance)*100}%, 
+  ${sliderColor} 100%)`;
+}
+
+function setToggleAccessible(currentTarget) {
+const toSlider2 = document.querySelector('#toSlider2');
+if (Number(currentTarget.value) <= 0 ) {
+toSlider2.style.zIndex = 2;
+} else {
+toSlider2.style.zIndex = 0;
+}
+}
+
+const fromSlider2 = document.querySelector('#fromSlider2');
+const toSlider2 = document.querySelector('#toSlider2');
+const fromInput2 = document.querySelector('#fromInput2');
+const toInput2 = document.querySelector('#toInput2');
+fillSlider(fromSlider2, toSlider2, '#C6C6C6', '#515151', toSlider2);
+setToggleAccessible(toSlider2);
+
+fromSlider2.oninput = () => controlfromSlider2(fromSlider2, toSlider2, fromInput2);
+toSlider2.oninput = () => controltoSlider2(fromSlider2, toSlider2, toInput2);
+fromInput2.oninput = () => controlfromInput2(fromSlider2, fromInput2, toInput2, toSlider2);
+toInput2.oninput = () => controltoInput2(toSlider2, fromInput2, toInput2, toSlider2);
+
+
+const projectList =[];
+
+projectList.push({
+  image:"https://bis.brandsholdingcompany.com/wp-content/uploads/2022/12/SG1771_0319-2-scaled.jpg",
+  title:"Lycée Français",
+  description:"La escuela infantil del Liceo Francés de Barcelona se sitúa en la calle Munner",
+  data_category:"estructuras",
+  location:"españa",
+  use:"docente",
+  size:3400,
+  year:2017,
+  onclick:"location.href='https://bis.brandsholdingcompany.com/lycee-francais/'"
+
+})
+
+
+
+function renderProjects(projectList){
+
+  //recorrer el array de proyectos
+
+  for(project of projectList){
+
+    const projectBlock = document.createElement('div');
+    projectBlock.classList.add('project');
+    projectBlock.setAttribute('onclick',projectList.onclick);
+    projectBlock.setAttribute('data-category',projectList.data_category);
+    projectBlock.setAttribute('location',projectList.location);
+    projectBlock.setAttribute('use',projectList.use);
+    projectBlock.setAttribute('size',projectList.size);
+    projectBlock.setAttribute('year',projectList.year);
+
+    
+    const projectImg = document.createElement('img');
+    projectImg.setAttribute('src',projectList.image);
+    
+    const projectDescriptionContainer = document.createElement('div');
+    projectDescriptionContainer.classList.add('text-project-container');
+
+    
+    const projectTitle = document.createElement('h3');
+    projectTitle.innerText = projectList.title;
+
+    const projectDescription = document.createElement('p');
+    projectDescription.innerText = projectList.description;
+
+
+    
+
+    
+    
+    
+    
+
+
+
+
+
+
+
+  }
+}
