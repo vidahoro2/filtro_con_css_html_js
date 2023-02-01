@@ -233,7 +233,7 @@ projectList.push({
   use:'docente',
   size:3400,
   year:2017,
-  onclick:"location.href='https://bis.brandsholdingcompany.com/lycee-francais/'"
+  onclick:"location.href='https://bis.brandsholdingcompany.com/lycee-francais/'",
 
 })
 
@@ -246,7 +246,7 @@ projectList.push({
   use:'docente',
   size:3400,
   year:2017,
-  onclick:"location.href='https://bis.brandsholdingcompany.com/lycee-francais/'"
+  onclick:"location.href='https://bis.brandsholdingcompany.com/lycee-francais/'",
 
 })
 
@@ -259,11 +259,11 @@ projectList.push({
   use:'docente',
   size:3400,
   year:2017,
-  onclick:"location.href='https://bis.brandsholdingcompany.com/lycee-francais/'"
+  onclick:"location.href='https://bis.brandsholdingcompany.com/lycee-francais/'",
 
 })
 
-
+//Renderizar los proyectos de manera automática
 function renderProjects(arr){
 
   //recorrer el array de proyectos
@@ -272,26 +272,27 @@ function renderProjects(arr){
 
     const projectBlock = document.createElement('div');
     projectBlock.classList.add('project');
-    projectBlock.setAttribute('onclick',projectList.onclick);
-    projectBlock.setAttribute('data-category',projectList.data_category);
-    projectBlock.setAttribute('location',projectList.location);
-    projectBlock.setAttribute('use',projectList.use);
-    projectBlock.setAttribute('size',projectList.size);
-    projectBlock.setAttribute('year',projectList.year);
+    projectBlock.setAttribute('onclick',project.onclick);
+    projectBlock.setAttribute('data-category',project.data_category);
+    projectBlock.setAttribute('location',project.location);
+    projectBlock.setAttribute('use',project.use);
+    projectBlock.setAttribute('size',project.size);
+    projectBlock.setAttribute('year',project.year);
 
     
     const projectImg = document.createElement('img');
-    projectImg.setAttribute('src',projectList.image);
+    projectImg.setAttribute('src',project.image);
+    projectImg.classList.add('image-project');
     
     const projectDescriptionContainer = document.createElement('div');
     projectDescriptionContainer.classList.add('text-project-container');
 
     
     const projectTitle = document.createElement('h3');
-    projectTitle.innerText = projectList.title;
+    projectTitle.innerText = project.title;
 
     const projectDescription = document.createElement('p');
-    projectDescription.innerText = projectList.description;
+    projectDescription.innerText = project.description;
 
     projectDescriptionContainer.appendChild(projectTitle);
     projectDescriptionContainer.appendChild(projectDescription);
