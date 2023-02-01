@@ -6,6 +6,7 @@ const select2 = document.querySelector('.selectuso');
 const select3 = document.querySelector('.selectPlace');
 const rangeSizeIn = document.querySelector('#rangeSizeIn');
 const rangeYearIn = document.querySelector('#rangeYearIn');
+const projectsContainer = document.querySelector('.projects-container');
 
 
 const project4 = document.querySelector('.project4');
@@ -224,12 +225,38 @@ toInput2.oninput = () => controltoInput2(toSlider2, fromInput2, toInput2, toSlid
 const projectList =[];
 
 projectList.push({
-  image:"https://bis.brandsholdingcompany.com/wp-content/uploads/2022/12/SG1771_0319-2-scaled.jpg",
-  title:"Lycée Français",
-  description:"La escuela infantil del Liceo Francés de Barcelona se sitúa en la calle Munner",
-  data_category:"estructuras",
-  location:"españa",
-  use:"docente",
+  image:'https://bis.brandsholdingcompany.com/wp-content/uploads/2022/12/SG1771_0319-2-scaled.jpg',
+  title:'Lycée Français',
+  description:'La escuela infantil del Liceo Francés de Barcelona se sitúa en la calle Munner',
+  data_category:'estructuras',
+  location:'españa',
+  use:'docente',
+  size:3400,
+  year:2017,
+  onclick:"location.href='https://bis.brandsholdingcompany.com/lycee-francais/'"
+
+})
+
+projectList.push({
+  image:'https://bis.brandsholdingcompany.com/wp-content/uploads/2022/12/SG1771_0319-2-scaled.jpg',
+  title:'Lycée Français',
+  description:'La escuela infantil del Liceo Francés de Barcelona se sitúa en la calle Munner',
+  data_category:'estructuras',
+  location:'españa',
+  use:'docente',
+  size:3400,
+  year:2017,
+  onclick:"location.href='https://bis.brandsholdingcompany.com/lycee-francais/'"
+
+})
+
+projectList.push({
+  image:'https://bis.brandsholdingcompany.com/wp-content/uploads/2022/12/SG1771_0319-2-scaled.jpg',
+  title:'Lycée Français',
+  description:'La escuela infantil del Liceo Francés de Barcelona se sitúa en la calle Munner',
+  data_category:'estructuras',
+  location:'españa',
+  use:'docente',
   size:3400,
   year:2017,
   onclick:"location.href='https://bis.brandsholdingcompany.com/lycee-francais/'"
@@ -237,12 +264,11 @@ projectList.push({
 })
 
 
-
-function renderProjects(projectList){
+function renderProjects(arr){
 
   //recorrer el array de proyectos
 
-  for(project of projectList){
+  for(project of arr){
 
     const projectBlock = document.createElement('div');
     projectBlock.classList.add('project');
@@ -267,19 +293,18 @@ function renderProjects(projectList){
     const projectDescription = document.createElement('p');
     projectDescription.innerText = projectList.description;
 
+    projectDescriptionContainer.appendChild(projectTitle);
+    projectDescriptionContainer.appendChild(projectDescription);
 
-    
+    projectBlock.append(projectImg,projectDescriptionContainer);
 
+    projectsContainer.appendChild(projectBlock);
     
-    
-    
-    
-
-
-
 
 
 
 
   }
 }
+
+renderProjects(projectList);
