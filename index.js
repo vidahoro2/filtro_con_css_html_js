@@ -268,18 +268,6 @@ function renderProjects(projectList){
     projectDescription.innerText = projectList.description;
 
 
-    
-
-    
-    
-    
-    
-
-
-
-
-
-
 
   }
 }

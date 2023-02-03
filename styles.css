@@ -38,6 +38,21 @@
     
     }
 
+.search-project{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    width: 100%;
+    margin-top: 10px;
+}
+.search-project label{
+    display: inline-block;
+}
+#search-project{
+
+    width: 100%;
+}
+
 /* Nuevo */
 .select-range label{
         display: block;
@@ -135,6 +150,11 @@ input[type="range"]::-webkit-slider-thumb {
 .setupdown{
     margin-top: -12rem;
     margin-bottom: -7rem; 
+}
+
+.text-project-container p{
+    font-size: 15px;
+    line-height: 17px;
 }
 
 
