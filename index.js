@@ -300,10 +300,6 @@ function renderProjects(arr){
     projectBlock.append(projectImg,projectDescriptionContainer);
 
     projectsContainer.appendChild(projectBlock);
-    
-
-
-
 
   }
 }
