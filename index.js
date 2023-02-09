@@ -6,6 +6,14 @@ const select2 = document.querySelector('.selectuso');
 const select3 = document.querySelector('.selectPlace');
 const rangeSizeIn = document.querySelector('#rangeSizeIn');
 const rangeYearIn = document.querySelector('#rangeYearIn');
+const searchProject = document.querySelector('#search-project');
+const projectsContainer = document.querySelector('.projects-container');
+const sl1 = document.querySelector('.sl1');
+const sl2 = document.querySelector('.sl2');
+const fc1 = document.querySelector('.fc1');
+const fc2 = document.querySelector('.fc2');
+const formControl2 = document.querySelector('.form_control');
+
 
 
 const project4 = document.querySelector('.project4');
@@ -208,6 +216,52 @@ toSlider2.style.zIndex = 0;
 }
 }
 
+
+
+
+searchProject.addEventListener("keyup", (event) => {
+  const searchProjectTerm = searchProject.value;
+  let results = "";
+
+  const projects = document.querySelectorAll(".project");
+
+  if (!searchProjectTerm) {
+    results = "Hola"
+    
+    // results = Array.from(projects).map((project) => project.outerHTML).join("");
+  } else {
+    projects.forEach((project) => {
+      const title = project.querySelector("h3").textContent;
+
+      if (title.includes(searchProjectTerm)) {
+        results += project.outerHTML;
+      }
+    });
+
+    if (!results) {
+      results = "No se encontraron resultados para su búsqueda.";
+    }
+  }
+
+  projectsContainer.innerHTML = results;
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 const fromSlider2 = document.querySelector('#fromSlider2');
 const toSlider2 = document.querySelector('#toSlider2');
 const fromInput2 = document.querySelector('#fromInput2');
@@ -271,3 +325,19 @@ function renderProjects(projectList){
 
   }
 }
+
+
+
+//Ocultar form-control
+
+sl1.addEventListener('click',()=>{
+
+  fc1.classList.remove('inactive');
+
+});
+
+sl2.addEventListener('click',()=>{
+
+  fc2.classList.remove('inactive');
+
+})

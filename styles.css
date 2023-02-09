@@ -47,12 +47,19 @@
 }
 .search-project label{
     display: inline-block;
+    margin-right: 5px;
 }
 #search-project{
 
     width: 100%;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    height: 1.1rem;
 }
-
+.inactive{
+    display: none !important;
+}
 /* Nuevo */
 .select-range label{
         display: block;
