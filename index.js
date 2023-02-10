@@ -265,8 +265,8 @@ projectList.push({
 projectList.push({
   image:'https://bis.brandsholdingcompany.com/wp-content/uploads/2022/12/Perspectiva-05-scaled.jpg',
   title:'Oficinas Campus Administrativo de la Generalitat Barcelona',
-  description:'Proyecto de obra nueva situado en la Zona Franca de Barcelona destinado a oficinas que consta de una planta sótano, un semisótano y 6 plantas sobre rasante y dividido en tres grandes zonas. ',
-  data_category:'estructuras',
+  description:'Proyecto de obra nueva situado en la Zona Franca de Barcelona destinado a oficinas.',
+  data_category:'sostenibilidad',
   location:'españa',
   use:'oficinas',
   size:58587,
@@ -555,7 +555,7 @@ projectList.push({
   image:'https://bis.brandsholdingcompany.com/wp-content/uploads/2023/01/02-20.png',
   title:'Complejo Deportivo Tunis',
   description:'Gran complejo deportivo situado en la ciudad de Túnez con unos 150.000m² construidos.',
-  data_category:'estructuras',
+  data_category:'sostenibilidad',
   location:'tunez',
   use:'deportivo',
   size:150000,
@@ -567,7 +567,7 @@ projectList.push({
   image:'https://bis.brandsholdingcompany.com/wp-content/uploads/2023/01/01-24.png',
   title:'Rehabilitación Casa Francesc Burés i borràs',
   description:'Nos encontramos un edificio con influencias neogóticas y germánicas propias de la época del modernismo barcelonés. ',
-  data_category:'estructuras',
+  data_category:'sostenibilidad',
   location:'españa',
   use:'cultural',
   size:7463,
@@ -579,7 +579,7 @@ projectList.push({
   image:'https://bis.brandsholdingcompany.com/wp-content/uploads/2023/01/02-22.png',
   title:'Easy Hotel',
   description:'El proyecto consiste en la construcción de un nuevo edificio para alojar el primer hotel en España de la cadena EASY HOTELS. ',
-  data_category:'estructuras',
+  data_category:'sostenibilidad',
   location:'españa',
   use:'hospitalario',
   size:7567,
@@ -591,7 +591,7 @@ projectList.push({
   image:'https://bis.brandsholdingcompany.com/wp-content/uploads/2023/01/01-26.png',
   title:'Gare Rabat Agdal',
   description:'Proyecto de modernización y ampliación de la actual estación de tren del barrio de Agdal de Rabat (Marruecos).',
-  data_category:'estructuras',
+  data_category:'sostenibilidad',
   location:'marruecos',
   use:'cultural',
   size:17071,
@@ -608,6 +608,7 @@ function renderProjects(arr){
 
     const projectBlock = document.createElement('div');
     projectBlock.classList.add('project');
+    projectBlock.classList.add('projectClassGeneral');
 
     projectBlock.setAttribute('onclick',project.onclick);
     projectBlock.setAttribute('data-category',project.data_category);
@@ -619,6 +620,7 @@ function renderProjects(arr){
     const projectImg = document.createElement('img');
     projectImg.setAttribute('src',project.image);
     projectImg.classList.add('image-project');
+    // projectImg.classList.add('imageGeneral');
     if (count % 4 === 0) {
       projectBlock.classList.remove('project');
       projectBlock.classList.add('big-project');
@@ -646,3 +648,124 @@ function renderProjects(arr){
 }
 
 renderProjects(projectList);
+
+
+//Filtrar por  Categoria
+
+const selectC = document.getElementById('category-select');
+selectC.addEventListener('change', filterProjects);
+
+
+function filterProjects() {
+  // const projectImg = document.querySelector('.imageGeneral');
+  const selectedCategory = selectC.value;
+  const projectBlocks = document.querySelectorAll('.projectClassGeneral');
+  let count = 0;
+  projectBlocks.forEach(block => {
+    if (block.getAttribute('data-category') === selectedCategory) {
+      block.style.display = 'block';
+      count++;
+      if (count <= 3) {
+        block.classList.remove('big-project');
+        block.classList.add('project');
+        block.querySelector('img').classList.remove('image-big-project');
+        block.querySelector('img').classList.add('image-project');
+
+      } else if (count % 4 === 0) {
+        block.classList.remove('project');
+        block.classList.add('big-project');
+        block.querySelector('img').classList.remove('image-project');
+        block.querySelector('img').classList.add('image-big-project');
+
+      } else {
+        block.classList.remove('big-project');
+        block.classList.add('project');
+        block.querySelector('img').classList.remove('image-big-project');
+        block.querySelector('img').classList.add('image-project');
+      }
+    } else {
+      block.style.display = 'none';
+    }
+  });
+}
+
+//Filtrar por Uso
+const selectUse = document.getElementById('uso-select');
+selectUse.addEventListener('change', filterProjectsByUse);
+
+
+function filterProjectsByUse(){
+
+  const selectedCategory = selectUse.value;
+  const projectBlocks = document.querySelectorAll('.projectClassGeneral');
+  let count = 0;
+  projectBlocks.forEach(block => {
+    if (block.getAttribute('use') === selectedCategory) {
+      block.style.display = 'block';
+      count++;
+      if (count <= 3) {
+        block.classList.remove('big-project');
+        block.classList.add('project');
+        block.querySelector('img').classList.remove('image-big-project');
+        block.querySelector('img').classList.add('image-project');
+
+      } else if (count % 4 === 0) {
+        block.classList.remove('project');
+        block.classList.add('big-project');
+        block.querySelector('img').classList.remove('image-project');
+        block.querySelector('img').classList.add('image-big-project');
+
+      } else {
+        block.classList.remove('big-project');
+        block.classList.add('project');
+        block.querySelector('img').classList.remove('image-big-project');
+        block.querySelector('img').classList.add('image-project');
+      }
+    } else {
+      block.style.display = 'none';
+    }
+  });
+
+}
+
+
+//Filtrar por  Ubicación
+const selectPlace = document.getElementById('selectPlace');
+selectPlace.addEventListener('change', filterProjectsByUse);
+
+
+function filterProjectsByUse(){
+
+  const selectedCategory = selectPlace.value;
+  const projectBlocks = document.querySelectorAll('.projectClassGeneral');
+  let count = 0;
+  projectBlocks.forEach(block => {
+    if (block.getAttribute('location') === selectedCategory) {
+      block.style.display = 'block';
+      count++;
+      if (count <= 3) {
+        block.classList.remove('big-project');
+        block.classList.add('project');
+        block.querySelector('img').classList.remove('image-big-project');
+        block.querySelector('img').classList.add('image-project');
+
+      } else if (count % 4 === 0) {
+        block.classList.remove('project');
+        block.classList.add('big-project');
+        block.querySelector('img').classList.remove('image-project');
+        block.querySelector('img').classList.add('image-big-project');
+
+      } else {
+        block.classList.remove('big-project');
+        block.classList.add('project');
+        block.querySelector('img').classList.remove('image-big-project');
+        block.querySelector('img').classList.add('image-project');
+      }
+    } else {
+      block.style.display = 'none';
+    }
+  });
+
+}
+
+
