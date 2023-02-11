@@ -62,9 +62,34 @@
 }
 /* Nuevo */
 .select-range label{
-        display: block;
-    }
-    /* Nuevo */
+    display: block;
+}
+
+.search-project{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    width: 100%;
+    margin-top: 13px;
+}
+.search-project label{
+    display: inline-block;
+    margin-right: 5px;
+    margin-top: 3px;
+}
+#search-project{
+
+    width: 100%;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 2px solid;
+    background: white;
+    height: 2.1rem;
+}
+.inactive{
+    display: none !important;
+}
 input[type="range"] {
       -webkit-appearance: none;
       height: 2px;
@@ -91,7 +116,7 @@ input[type="range"]::-webkit-slider-thumb {
     justify-content: space-between;
     row-gap: 10px;
     column-gap: 10px;
-        margin-top:4rem;
+    margin-top:4rem;
 
         
 }
@@ -100,21 +125,9 @@ input[type="range"]::-webkit-slider-thumb {
     width: 32%;
     cursor: pointer;
 }
-.project1{
-    background: white;
-}
-.project2{
-    background: white;
-}
-.project3{
-    background: white;
-}
-.project4{
-    background: white;
-}
+
 .big-project{
     width: 100%;
-    height: 50rem;
     margin-bottom: 2rem;
     cursor: pointer;
 }
@@ -127,7 +140,8 @@ input[type="range"]::-webkit-slider-thumb {
 }
 .image-big-project{
     width: 100%;
-    height: 40rem;
+    height: 36rem;
+    object-fit: cover;
     border-radius: 15px;
 }
 .project8{
@@ -246,54 +260,28 @@ height: 0;
 z-index: 1;
 }
 @media only screen and (max-width: 425px)  {
-    .rowdown {
-    display:none;
-    }
+ 
     
     .project{
         width: 22rem;
     
     }
     .text-project-container{
-            text-align: justify;
+        text-align: justify;
+    }
+    .image-big-project{
+        width: 100%;
+        height: 60% !important;
+        border-radius: 10px;
+        object-fit: cover;
+    
     }
     .big-project{
-            margin-top:2rem;
-            margin-bottom: -23rem !important;
+        width: 22rem;
+        cursor: pointer;
     }
-    .project5, .project6, .project7, .project9, .project10{
-        margin-top: 3rem;
-    }
+
     
     }
-@media only screen and (max-width: 768px)  {
-.big-project{
-        margin-top:4rem;
-        margin-bottom: -19rem;
-}
-.text-project-container{
-    text-align: justify;
-}
-.project{
-height: 20rem;
-margin-bottom:1rem;
-}
-.rowdown {
-display:none;
-}
 
-}
 
-@media only screen and (min-width: 1373px){
-
-    .project17{
-        margin-top:2rem;
-        
-    }
-
-    .project20{
-        margin-bottom: 14rem !important;
-        
-    }
-    
-}
