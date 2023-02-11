@@ -1,40 +1,15 @@
-const categorias = ['estructuras','instalaciones','sostenibilidad'];
-const usos = ['parquing','centroatencionprimaria','civil','comercial','cultural','docente','deportivo','hospitalario','hotelero','industrial','oficinas','recintofiral','residencial','servicios','sociosanitario'];
-const ubicaciones =['españa','andorra','ecuador','marruecos','argelia']
 const select = document.querySelector('select');
 const select2 = document.querySelector('.selectuso');
 const select3 = document.querySelector('.selectPlace');
 const rangeSizeIn = document.querySelector('#rangeSizeIn');
 const rangeYearIn = document.querySelector('#rangeYearIn');
+const searchProject = document.querySelector('#search-project');
 const projectsContainer = document.querySelector('.projects-container');
+const sl1 = document.querySelector('.sl1');
+const sl2 = document.querySelector('.sl2');
+const fc1 = document.querySelector('.fc1');
+const fc2 = document.querySelector('.fc2');
 
-
-const project4 = document.querySelector('.project4');
-const project6 = document.querySelector('.project6');
-const project7 = document.querySelector('.project7');
-const project8 = document.querySelector('.project8');
-const project10 = document.querySelector('.project10')
-const project12 = document.querySelector('.project12');
-const project15 = document.querySelector('.project15');
-const project16 = document.querySelector('.project16');
-const project17 = document.querySelector('.project17');
-const project18 = document.querySelector('.project18');
-const project20 = document.querySelector('.project20');
-const project21 = document.querySelector('.project21');
-const project24= document.querySelector('.project24');
-const image4 = document.querySelector('#image4');
-const image6 = document.querySelector('#image6');
-const image7 = document.querySelector('#image7');
-const image8 = document.querySelector('#image8');
-const image10 = document.querySelector('#image10');
-const image15 = document.querySelector('#image15');
-const image16 = document.querySelector('#image16');
-const image17 = document.querySelector('#image17');
-const image18 = document.querySelector('#image18');
-const image20 = document.querySelector('#image20');
-const image21 = document.querySelector('#image21');
-const image24 = document.querySelector('#image24');
-const imageBigProject12 = document.querySelector('#image12');
 
 let style = document.createElement('style');
 
@@ -599,7 +574,7 @@ projectList.push({
   onclick:"location.href='https://bis.brandsholdingcompany.com/gare-rabat-agdal/'",
 
 })
-
+//Visualizas proyectos en la página
 function renderProjects(arr){
   let count = 0;
   //recorrer el array de proyectos
@@ -620,7 +595,7 @@ function renderProjects(arr){
     const projectImg = document.createElement('img');
     projectImg.setAttribute('src',project.image);
     projectImg.classList.add('image-project');
-    // projectImg.classList.add('imageGeneral');
+    
     if (count % 4 === 0) {
       projectBlock.classList.remove('project');
       projectBlock.classList.add('big-project');
@@ -657,7 +632,7 @@ selectC.addEventListener('change', filterProjects);
 
 
 function filterProjects() {
-  // const projectImg = document.querySelector('.imageGeneral');
+
   const selectedCategory = selectC.value;
   const projectBlocks = document.querySelectorAll('.projectClassGeneral');
   let count = 0;
@@ -697,6 +672,7 @@ selectUse.addEventListener('change', filterProjectsByUse);
 function filterProjectsByUse(){
 
   const selectedCategory = selectUse.value;
+  console.log(selectedCategory);
   const projectBlocks = document.querySelectorAll('.projectClassGeneral');
   let count = 0;
   projectBlocks.forEach(block => {
@@ -731,10 +707,10 @@ function filterProjectsByUse(){
 
 //Filtrar por  Ubicación
 const selectPlace = document.getElementById('selectPlace');
-selectPlace.addEventListener('change', filterProjectsByUse);
+selectPlace.addEventListener('change', filterProjectsByPlace);
 
 
-function filterProjectsByUse(){
+function filterProjectsByPlace(){
 
   const selectedCategory = selectPlace.value;
   const projectBlocks = document.querySelectorAll('.projectClassGeneral');
@@ -769,3 +745,70 @@ function filterProjectsByUse(){
 }
 
 
+// Buscador
+
+
+searchProject.addEventListener("keyup", (event) => {
+  const searchTerm = searchProject.value;
+  let results = "";
+
+  if (!searchTerm) {
+    results = projectList.map((project) => {
+      return `<div class="project projectClassGeneral" data-category="${project.data_category}" location="${project.location}" use="${project.use}" size="${project.size}" year="${project.year}" onclick="${project.onclick}">
+      <img src="${project.image}" class="image-project">
+      <div class="text-project-container">
+        <h3>${project.title}</h3>
+        <p>${project.description}</p>
+      </div>
+    </div>`;
+    }).join("");
+  } else {
+    projectList.forEach((project) => {
+      if (project.title.includes(searchTerm)) {
+        results += `<div class="project projectClassGeneral" data-category="${project.data_category}" location="${project.location}" use="${project.use}" size="${project.size}" year="${project.year}" onclick="${project.onclick}">
+        <img src="${project.image}" class="image-project">
+        <div class="text-project-container">
+          <h3>${project.title}</h3>
+          <p>${project.description}</p>
+        </div>
+      </div>`;
+      }
+    });
+
+    if (!results) {
+      results = "No se encontraron resultados para su búsqueda.";
+    }
+  }
+
+  projectsContainer.innerHTML = results;
+});
+
+
+//Ocultar form-control
+
+sl1.addEventListener('click',()=>{
+
+  fc1.classList.remove('inactive');
+  
+
+});
+
+sl2.addEventListener('click',()=>{
+
+  fc2.classList.remove('inactive');
+
+})
+
+//Filtrar por tamaño
+const fromInputSize = document.getElementById("fromInput");
+fromSlider.addEventListener("input", updateRange);
+toSlider.addEventListener("input", updateRange);
+
+function updateRange() {
+  fromInputSize.value = fromSlider.value;
+  toInput.value = toSlider.value;
+  
+
+ 
+  console.log(fromInputSize);
+}

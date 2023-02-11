@@ -40,9 +40,34 @@
 
 /* Nuevo */
 .select-range label{
-        display: block;
-    }
-    /* Nuevo */
+    display: block;
+}
+
+.search-project{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    width: 100%;
+    margin-top: 13px;
+}
+.search-project label{
+    display: inline-block;
+    margin-right: 5px;
+    margin-top: 3px;
+}
+#search-project{
+
+    width: 100%;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 2px solid;
+    background: white;
+    height: 2.1rem;
+}
+.inactive{
+    display: none !important;
+}
 input[type="range"] {
       -webkit-appearance: none;
       height: 2px;
@@ -78,18 +103,7 @@ input[type="range"]::-webkit-slider-thumb {
     width: 32%;
     cursor: pointer;
 }
-.project1{
-    background: white;
-}
-.project2{
-    background: white;
-}
-.project3{
-    background: white;
-}
-.project4{
-    background: white;
-}
+
 .big-project{
     width: 100%;
     margin-bottom: 2rem;
@@ -219,9 +233,7 @@ height: 0;
 z-index: 1;
 }
 @media only screen and (max-width: 425px)  {
-    .rowdown {
-    display:none;
-    }
+ 
     
     .project{
         width: 22rem;
@@ -230,43 +242,19 @@ z-index: 1;
     .text-project-container{
         text-align: justify;
     }
-    /* .big-project{
-            margin-top:2rem;
-            margin-bottom: -23rem !important;
-    } */
-    .project5, .project6, .project7, .project9, .project10{
-        margin-top: 3rem;
-    }
+    .image-big-project{
+        width: 100%;
+        height: 60% !important;
+        border-radius: 10px;
+        object-fit: cover;
     
     }
-@media only screen and (max-width: 768px)  {
-/* .big-project{
-        margin-top:4rem;
-        margin-bottom: -19rem;
-} */
-.text-project-container{
-    text-align: justify;
-}
-/* .project{
-height: 20rem;
-margin-bottom:1rem;
-} */
-.rowdown {
-display:none;
-}
-
-}
-
-@media only screen and (min-width: 1373px){
-
-    .project17{
-        margin-top:2rem;
-        
+    .big-project{
+        width: 22rem;
+        cursor: pointer;
     }
 
-    .project20{
-        margin-bottom: 14rem !important;
-        
-    }
     
-}
+    }
+
+

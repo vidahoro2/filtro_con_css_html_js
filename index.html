@@ -47,55 +47,45 @@
         </select>
         </section>
 
-        <!-- <section class="range-cat">
-        <div class="select-range">
-        <label for="myRange">Tamaño</label>
-        
-           <input type="range" id="rangeSizeIn" name="rangeSizeIn" min="2000" max="180000" value="2000" oninput="rangeSizeOut.value=value" />
-           <output id="rangeSizeOut" >2000  </output><p style="display: inline-block;">m²</p>
+        <section class="search-project">
+            <label for="search-project">Buscar</label>
+            <input id="search-project" type="text" placeholder="Buscar proyecto por nombre">
+        </section>
 
-        </div>
 
-        <div class="select-range">
-        <label for="myRange">Año</label>
-           <input type="range" id="rangeYearIn" name="rangeYearIn" min="1998" max="2022" value="206" step="2" oninput="rangeYearOut.value=value"/>
-           <output id="rangeYearOut">1998 </output><p style="display: inline-block;"></p>
-        </div>
-
-        </section> -->
         <section class="range-cat">
             <div class="range_container">
                 <p>Tamaño</p>
-                <div class="sliders_control">
-                    <input id="fromSlider" type="range" value="3000" min="2000" max="180000"/>
-                    <input id="toSlider" type="range" value="80000" min="2000" max="180000"/>
+                <div class="sliders_control sl1">
+                    <input id="fromSlider" type="range" value="2000" min="2000" max="180000"/>
+                    <input id="toSlider" type="range" value="180000" min="2000" max="180000"/>
                 </div>
-                <div class="form_control">
+                <div class="form_control inactive fc1">
                     <div class="form_control_container">
                         <div class="form_control_container__time"></div>
-                        <input class="form_control_container__time__input" type="number" id="fromInput" value="3000" min="2000" max="180000"/>
+                        <input class="form_control_container__time__input" type="number" id="fromInput" value="2000" min="2000" max="180000"/>
                     </div>
                     <div class="form_control_container">
                         <div class="form_control_container__time"></div>
-                        <input class="form_control_container__time__input" type="number" id="toInput" value="80000" min="2000" max="180000"/>
+                        <input class="form_control_container__time__input" type="number" id="toInput" value="180000" min="2000" max="180000"/>
                     </div>
                 </div>
             </div> 
             
             <div class="range_container">
                 <p>Año</p>
-                <div class="sliders_control">
-                    <input id="fromSlider2" type="range" value="2000" min="1998" max="2022"/>
-                    <input id="toSlider2" type="range" value="2013" min="1998" max="2022"/>
+                <div class="sliders_control sl2">
+                    <input id="fromSlider2" type="range" value="1998" min="1998" max="2022"/>
+                    <input id="toSlider2" type="range" value="2022" min="1998" max="2022"/>
                 </div>
-                <div class="form_control">
+                <div class="form_control inactive fc2">
                     <div class="form_control_container">
                         <div class="form_control_container__time"></div>
-                        <input class="form_control_container__time__input" type="number" id="fromInput2" value="2000" min="0" max="2022"/>
+                        <input class="form_control_container__time__input" type="number" id="fromInput2" value="1998" min="1998" max="2022"/>
                     </div>
                     <div class="form_control_container">
                         <div class="form_control_container__time"></div>
-                        <input class="form_control_container__time__input" type="number" id="toInput2" value="2013" min="1998" max="2022"/>
+                        <input class="form_control_container__time__input" type="number" id="toInput2" value="2022" min="1998" max="2022"/>
                     </div>
                 </div>
             </div>
