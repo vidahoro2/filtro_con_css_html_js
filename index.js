@@ -47,9 +47,37 @@ if (from > to) {
   fromInput.value = to;
 } else {
   fromInput.value = from;
+  sizefilter()
 }
 }
-
+//FILTO POR AÑO
+function sizefilter(){
+  var projectFilter = [];
+  projectList.forEach(itemProject=>{
+    if(itemProject.size>=fromInput.value && itemProject.size<=toInput.value){
+        projectFilter.push(itemProject)
+    }
+    while (projectsContainer.firstChild) {
+      projectsContainer.removeChild(projectsContainer.firstChild);
+    }
+    renderProjects(projectFilter)
+  })
+}
+//FILTRO POR TAMAÑO
+//FILTRO POR AÑO
+function yearfilter(){
+  var projectFilter = [];
+  projectList.forEach(itemProject=>{
+    if(itemProject.year>=fromInput2.value && itemProject.year<=toInput2.value){
+        projectFilter.push(itemProject)
+    }
+    while (projectsContainer.firstChild) {
+      projectsContainer.removeChild(projectsContainer.firstChild);
+    }
+    renderProjects(projectFilter)
+  })
+}
+//FILTRO POR AÑO
 function controlToSlider(fromSlider, toSlider, toInput) {
 const [from, to] = getParsed(fromSlider, toSlider);
 fillSlider(fromSlider, toSlider, '#C6C6C6', '#515151', toSlider);
@@ -57,6 +85,7 @@ setToggleAccessible(toSlider);
 if (from <= to) {
   toSlider.value = to;
   toInput.value = to;
+  sizefilter()
 } else {
   toInput.value = from;
   toSlider.value = from;
@@ -134,12 +163,13 @@ if (from <= to) {
 function controlfromSlider2(fromSlider2, toSlider2, fromInput2) {
 const [from, to] = getParsed(fromSlider2, toSlider2);
 fillSlider(fromSlider2, toSlider2, '#C6C6C6', '#515151', toSlider2);
-if (from > to) {
-fromSlider2.value = to;
-fromInput2.value = to;
-} else {
-fromInput2.value = from;
-}
+  if (from > to) {
+    fromSlider2.value = to;
+    fromInput2.value = to;
+  } else {
+    fromInput2.value = from;
+    yearfilter()
+  }
 }
 
 function controltoSlider2(fromSlider2, toSlider2, toInput2) {
@@ -149,6 +179,7 @@ setToggleAccessible(toSlider2);
 if (from <= to) {
 toSlider2.value = to;
 toInput2.value = to;
+yearfilter()
 } else {
 toInput2.value = from;
 toSlider2.value = from;
@@ -841,7 +872,6 @@ searchProject.addEventListener("keyup", (event) => {
   projectsContainer.innerHTML = results;
 });
 
-});
 
 //Ocultar form-control
 
@@ -864,10 +894,5 @@ fromSlider.addEventListener("input", updateRange);
 toSlider.addEventListener("input", updateRange);
 
 function updateRange() {
-  fromInputSize.value = fromSlider.value;
-  toInput.value = toSlider.value;
   
-
- 
-  console.log(fromInputSize);
 }
