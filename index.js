@@ -620,6 +620,18 @@ projectList.push({
   onclick:"location.href='https://bis.brandsholdingcompany.com/gare-rabat-agdal/'",
 
 })
+projectList.push({
+  image:'https://bis.brandsholdingcompany.com/wp-content/uploads/2023/01/01-26.png',
+  title:'Gare Rabat Agdal',
+  description:'Proyecto de modernización y ampliación de la actual estación de tren del barrio de Agdal de Rabat (Marruecos).',
+  data_category:'sostenibilidad',
+  location:'marruecos',
+  use:'cultural',
+  size:17071,
+  year:2016,
+  onclick:"location.href='https://bis.brandsholdingcompany.com/gare-rabat-agdal/'",
+
+})
 //Visualizas proyectos en la página
 function renderProjects(arr){
   let count = 0;
