@@ -50,7 +50,7 @@ if (from > to) {
   sizefilter()
 }
 }
-//FILTO POR AÑO
+//FILTRO POR TAMAÑO
 function sizefilter(){
   var projectFilter = [];
   projectList.forEach(itemProject=>{
@@ -63,7 +63,7 @@ function sizefilter(){
     renderProjects(projectFilter)
   })
 }
-//FILTRO POR TAMAÑO
+
 //FILTRO POR AÑO
 function yearfilter(){
   var projectFilter = [];
@@ -835,6 +835,13 @@ function filterProjectsByPlace(){
 
 
 // Buscador
+
+const input = document.getElementById("search-project");
+
+input.addEventListener("input", function() {
+  this.value = this.value.charAt(0).toUpperCase() + this.value.slice(1);
+});
+
 
 
 searchProject.addEventListener("keyup", (event) => {
